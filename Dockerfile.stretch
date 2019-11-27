@@ -1,0 +1,16 @@
+FROM node:12-stretch
+
+COPY package.json /app/package.json
+COPY yarn.lock /app/yarn.lock
+
+WORKDIR /app
+
+RUN yarn install --production
+
+COPY . /app
+
+RUN yarn global add file:$(pwd)
+ENV PATH="${PATH}:$(yarn global bin)"
+
+ENTRYPOINT [ "node", "/app/out/index.js" ]
+CMD [ "--help" ]

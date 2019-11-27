@@ -1,0 +1,15 @@
+.awcache/
+.licenses/
+.nyc_output/
+node_modules/
+out/
+temp/
+
+# types
+*.bak
+*.pid
+*.swp
+*.tmp
+
+package-lock.json
+yarn-error.log
