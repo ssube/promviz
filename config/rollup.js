@@ -27,44 +27,16 @@ const bundle = {
 	external,
 	input: {
 		include: [
-			join(rootPath, 'src', 'index.ts'),
-			join(rootPath, 'test', 'harness.ts'),
-			join(rootPath, 'test', '**', 'Test*.ts'),
+			join(rootPath, 'src', 'app.ts'),
 		],
-	},
-	manualChunks(id) {
-		if (id.includes(`${sep}test${sep}`)) {
-			return 'test';
-		}
-
-		if (id.match(/commonjs-external/i) || id.match(/commonjsHelpers/)) {
-			return 'vendor';
-		}
-
-		if (id.includes(`${sep}node_modules${sep}`)) {
-			return 'vendor';
-		}
-
-		if (id.includes(`${sep}src${sep}index`)) {
-			return 'index';
-		}
-
-		if (id.includes(`${sep}src${sep}`)) {
-			return 'main';
-		}
-
-		if (debug) {
-			console.log('file belongs to no chunk', id);
-		}
-
-		return 'nochunk';
 	},
 	output: {
 		dir: targetPath,
 		chunkFileNames: '[name].js',
 		entryFileNames: 'entry-[name].js',
-		format: 'cjs',
+		format: 'iife',
 		globals,
+		name: 'promviz',
 		sourcemap: true,
 	},
 	plugins: [
