@@ -38,12 +38,12 @@ export DEBUG_PORT ?= 9229
 export NODE_VERSION		:= $(shell node -v || echo "none")
 export RUNNER_VERSION  := $(CI_RUNNER_VERSION)
 
-
 # Node options
 NODE_BIN := $(ROOT_PATH)/node_modules/.bin
 NODE_CMD ?= $(shell env node)
 NODE_DEBUG ?= --inspect-brk=$(DEBUG_BIND):$(DEBUG_PORT) --nolazy
 NODE_INFO := $(shell node -v)
+export NODE_OPTIONS ?= --max-old-space-size=4000
 
 # Tool options
 COVER_OPTS	?= --reporter=lcov --reporter=text-summary --reporter=html --report-dir="$(TARGET_PATH)/coverage" --exclude-after-remap

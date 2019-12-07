@@ -1,4 +1,4 @@
-import { join, sep } from 'path';
+import { join } from 'path';
 import commonjs from 'rollup-plugin-commonjs';
 import { eslint } from 'rollup-plugin-eslint';
 import json from 'rollup-plugin-json';
@@ -27,7 +27,7 @@ const bundle = {
 	external,
 	input: {
 		include: [
-			join(rootPath, 'src', 'app.ts'),
+			join(rootPath, 'src', 'app.tsx'),
 		],
 	},
 	output: {
@@ -67,6 +67,21 @@ const bundle = {
 				NODE_VERSION: process.env['NODE_VERSION'],
 				PACKAGE_NAME: metadata.name,
 				PACKAGE_VERSION: metadata.version,
+			},
+		}),
+		/* fix react: https://github.com/rollup/rollup/issues/487 */
+		replace({
+      'process.env.NODE_ENV': JSON.stringify( 'production' )
+		}),
+		/* fix plotly/d3: https://github.com/plotly/plotly.js/issues/3518 */
+		replace({
+			include: [
+				join('node_modules', 'plotly.js', 'dist', '*.js'),
+			],
+			values: {
+				'd3_document = this.document': 'd3_document = self.document',
+				'this.navigator': 'self.navigator',
+				'this[d3_vendorSymbol(this': 'window[d3_vendorSymbol(window',
 			},
 		}),
 		resolve({
