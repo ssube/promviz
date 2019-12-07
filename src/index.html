@@ -6,8 +6,17 @@
 		<script charset="utf-8" src="https://cdnjs.cloudflare.com/ajax/libs/plotly.js/1.49.5/plotly.min.js"></script>
 		<script charset="utf-8" src="../out/entry-_rollup-plugin-multi-entry:entry-point.js"></script>
 	</head>
-	<body>
-		<div id="graph-container"></div>
+	<body class="viewport">
+		<header>Prometheus Visualizer</header>
+		<nav>
+			<span>Menu</span>
+			<span>Environment</span>
+			<span>Filter</span>
+		</nav>
+		<section>
+			<div id="graph-container"></div>
+		</section>
+		<footer>Prometheus Visualizer</footer>
 		<script>promviz.main([]);</script>
 	</body>
 </html>

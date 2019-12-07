@@ -96,7 +96,6 @@ build: build-bundle build-docs
 
 build-bundle: node_modules
 	$(NODE_BIN)/rollup --config $(CONFIG_PATH)/rollup.js
-	sed -i '1s;^;#! /usr/bin/env node\n\n;' $(TARGET_PATH)/index.js
 	cp -v $(SOURCE_PATH)/index.html $(TARGET_PATH)/index.html
 
 build-docs: ## generate html docs

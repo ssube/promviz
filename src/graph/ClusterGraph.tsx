@@ -12,6 +12,11 @@ export interface ClusterGraphProps {
 export class ClusterGraph extends React.Component<ClusterGraphProps> {
   render() {
     return <Plot
+      config={{
+        fillFrame: true,
+        responsive: true,
+        scrollZoom: true,
+      }}
       data={[
         {
           branchvalues: 'total',
@@ -23,10 +28,9 @@ export class ClusterGraph extends React.Component<ClusterGraphProps> {
         } as any,
       ]}
       layout={ {
-        width: 1800,
-        height: 1000,
-        title: 'Metric Names',
+        autosize: true,
       } }
+      useResizeHandler={true}
     />;
   }
 }
