@@ -1,8 +1,6 @@
 import React from 'react';
 import Plot from 'react-plotly.js';
 
-
-
 export interface ClusterGraphProps {
   data: {
     labels: Array<string>;
@@ -16,12 +14,13 @@ export class ClusterGraph extends React.Component<ClusterGraphProps> {
     return <Plot
       data={[
         {
+          branchvalues: 'total',
           labels: this.props.data.labels,
           parents: this.props.data.parents,
-          /* eslint-disable-next-line */
-          type: 'sunburst' as any,
+          type: 'sunburst',
           values: this.props.data.values,
-        },
+          /* eslint-disable-next-line */
+        } as any,
       ]}
       layout={ {
         width: 1800,
