@@ -22,7 +22,7 @@ export async function main(args: ReadonlyArray<string>): Promise<number> {
         regexp: false,
       },
       source: {
-        url: 'staging',
+        url: 'example',
       },
     },
   });
