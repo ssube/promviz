@@ -32,9 +32,6 @@ export async function main(args: ReadonlyArray<string>): Promise<number> {
       source: {
         url: 'staging',
       },
-      root: {
-        label: 'root',
-      },
     },
   });
 

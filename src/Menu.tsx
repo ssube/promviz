@@ -9,9 +9,6 @@ export interface MenuProps {
   source: {
     url: string;
   };
-  root: {
-    label: string;
-  };
 }
 
 @observer

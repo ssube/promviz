@@ -1,4 +1,4 @@
-import { isNil, startsWith, unzip, zip, sum } from 'lodash';
+import { isNil, startsWith, unzip, zip } from 'lodash';
 import { observer } from 'mobx-react';
 import { PlotMouseEvent } from 'plotly.js';
 import React from 'react';
@@ -55,16 +55,11 @@ export class ClusterGraph extends React.Component<ClusterGraphProps> {
 
       return <Plot {...plops} />;
     } catch (err) {
-      return <span>{ err.message }</span>;
+      return <span>{err.message}</span>;
     }
   }
 
   onClick(e: Readonly<PlotMouseEvent>) {
     console.log('click', e);
-    const [p] = e.points;
-    const {label} = p as any;
-    if (!isNil(label)) {
-      this.props.menu.root.label = label.toString();
-    }
   }
 }
