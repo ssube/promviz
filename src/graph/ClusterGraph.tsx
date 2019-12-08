@@ -22,15 +22,9 @@ export class ClusterGraph extends React.Component<ClusterGraphProps> {
 
     const triwise = zip(this.props.data.labels, this.props.data.parents, this.props.data.values);
     const needed = triwise.filter(([label]) => startsWith(label, filter));
-    needed.push(['root', '', sum(needed)]);
+    needed.push([filter, '', sum(needed)]);
 
     const [labels, parents, values] = unzip(needed);
-    const filteredGraph = {
-      labels,
-      parents,
-      values,
-    };
-
     const plops: PlotParams = {
       config: {
         fillFrame: true,
@@ -38,9 +32,12 @@ export class ClusterGraph extends React.Component<ClusterGraphProps> {
         scrollZoom: true,
       },
       data: [{
-        ...filteredGraph,
+        labels,
         branchvalues: 'total',
+        maxdepth: 3,
+        parents,
         type: 'sunburst',
+        values,
       } as any],
       layout: {
         autosize: true,
