@@ -2,6 +2,21 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.2.1](https://git.apextoaster.com/ssube/promviz/compare/v0.2.0...v0.2.1) (2019-12-08)
+
+
+### Features
+
+* **build:** add dev server ([690da5f](https://git.apextoaster.com/ssube/promviz/commit/690da5fb1ba384821726b23d40440220ea80c5e7))
+* **build:** configure for gitpod ([e9e7a1b](https://git.apextoaster.com/ssube/promviz/commit/e9e7a1ba4950b0a4547d6f9fd1478d7ceac831d7))
+* **build:** switch to es modules ([7c33c7f](https://git.apextoaster.com/ssube/promviz/commit/7c33c7fa3d6551e2d53eb0aeb362391ce7bd28b1))
+
+
+### Bug Fixes
+
+* **build:** add gitpod run tasks ([626cb8e](https://git.apextoaster.com/ssube/promviz/commit/626cb8ea66ef524b8cba6049d0085f970fd8fa69))
+* **docs:** add gitpod link ([15cbed5](https://git.apextoaster.com/ssube/promviz/commit/15cbed53226592057f486fca3b13bf79899a270e))
+
 ## 0.2.0 (2019-12-08)
 
 
