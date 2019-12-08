@@ -23,10 +23,6 @@ export class Menu extends React.Component<MenuProps> {
         <input type='text' value={this.props.filter.expr} onChange={(e) => this.onFilterChange(e)} />
       </span>
       <span>
-        <label>Root Node</label>
-        <input type='text' value={this.props.root.label} />
-      </span>
-      <span>
         <label>Source</label>
         <input type='text' value={this.props.source.url} onChange={(e) => this.onSourceChange(e)} />
       </span>
