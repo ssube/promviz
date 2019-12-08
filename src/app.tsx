@@ -3,7 +3,7 @@ import { observer } from 'mobx-react';
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-import { parseNames } from './graph';
+import { GraphData, parseNames } from './graph';
 import { ClusterGraph } from './graph/ClusterGraph';
 import { Menu, MenuProps } from './Menu';
 import dataFile from './resource/names.json';
@@ -25,31 +25,31 @@ export async function main(args: ReadonlyArray<string>): Promise<number> {
   const state = observable({
     graphData,
     menuOptions: {
-      env: 'staging',
-      filter: '',
-      root: 'root',
+      filter: {
+        expr: '',
+        regexp: false,
+      },
+      source: {
+        url: 'staging',
+      },
+      root: {
+        label: 'root',
+      },
     },
   });
 
   ReactDOM.render(<App
     key='app'
+    graph={state.graphData}
     menu={state.menuOptions}
   >
-    <ClusterGraph
-      data={state.graphData}
-      key='metrics-graph'
-      menu={state.menuOptions}
-    />
   </App>, document.getElementById('app-container'));
-
-  setInterval(() => {
-    state.menuOptions.filter = Math.random().toString();
-  }, 5000);
 
   return STATUS_SUCCESS;
 }
 
 interface AppProps {
+  graph: GraphData;
   menu: MenuProps;
 }
 
@@ -58,16 +58,21 @@ export class App extends React.Component<AppProps> {
   render() {
     return <section>
       <header>
-        Prometheus Visualizer
+        { VERSION_INFO.package.name } - { VERSION_INFO.package.version }
       </header>
-      <Menu env={this.props.menu.env} filter={this.props.menu.filter} root={this.props.menu.root} />
+      <Menu {...this.props.menu} />
       <section key='graph-section'>
         <div id='graph-container' key='graph-container'>
+          <ClusterGraph
+            data={this.props.graph}
+            key='metrics-graph'
+            menu={this.props.menu}
+          />
           { this.props.children }
         </div>
       </section>
       <footer>
-        Prometheus Visualizer { VERSION_INFO.git.commit }
+        { VERSION_INFO.git.branch } - { VERSION_INFO.git.commit }
       </footer>
     </section>;
   }

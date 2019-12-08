@@ -1,7 +1,8 @@
-import { isNil } from 'lodash';
-import { PlotMouseEvent, PlotSelectionEvent, ButtonClickEvent, LegendClickEvent } from 'plotly.js';
+import { isNil, startsWith, unzip, zip, sum } from 'lodash';
+import { observer } from 'mobx-react';
+import { PlotMouseEvent } from 'plotly.js';
 import React from 'react';
-import Plot, { PlotParams, Figure } from 'react-plotly.js';
+import Plot, { PlotParams } from 'react-plotly.js';
 
 import { MenuProps } from '../Menu';
 
@@ -14,8 +15,22 @@ export interface ClusterGraphProps {
   menu: MenuProps;
 }
 
+@observer
 export class ClusterGraph extends React.Component<ClusterGraphProps> {
   render() {
+    const filter = this.props.menu.filter.expr;
+
+    const triwise = zip(this.props.data.labels, this.props.data.parents, this.props.data.values);
+    const needed = triwise.filter(([label]) => startsWith(label, filter));
+    needed.push(['root', '', sum(needed)]);
+
+    const [labels, parents, values] = unzip(needed);
+    const filteredGraph = {
+      labels,
+      parents,
+      values,
+    };
+
     const plops: PlotParams = {
       config: {
         fillFrame: true,
@@ -23,54 +38,26 @@ export class ClusterGraph extends React.Component<ClusterGraphProps> {
         scrollZoom: true,
       },
       data: [{
+        ...filteredGraph,
         branchvalues: 'total',
-        labels: this.props.data.labels,
-        parents: this.props.data.parents,
         type: 'sunburst',
-        values: this.props.data.values,
       } as any],
       layout: {
         autosize: true,
       },
-      onButtonClicked: (e) => this.onButton(e),
       onClick: (e) => this.onClick(e),
-      onUpdate: (e) => this.onUpdate(e),
-      onSelecting: (e) => this.onSelect(e),
-      onLegendClick: (e: Readonly<LegendClickEvent>) => {
-        console.log('legend click');
-        return true;
-      },
       useResizeHandler: true,
     };
-
-    /* eslint-disable-next-line */
-    (plops as any).selectedPath = [this.props.menu.root];
 
     return <Plot {...plops} />;
   }
 
-  onButton(e: Readonly<ButtonClickEvent>) {
-    console.log('button', e);
-  }
-
   onClick(e: Readonly<PlotMouseEvent>) {
-    console.log('graph click', e);
+    console.log('click', e);
     const [p] = e.points;
-    const [label] = p.data.labels;
+    const {label} = p as any;
     if (!isNil(label)) {
-      this.props.menu.filter = label.toString();
+      this.props.menu.root.label = label.toString();
     }
-  }
-
-  onSelected(e: Readonly<PlotSelectionEvent>) {
-    console.log('selected', e);
-  }
-
-  onSelect(e: Readonly<PlotSelectionEvent>) {
-    console.log('selecting', e);
-  }
-
-  onUpdate(e: Readonly<Figure>) {
-    console.log('update', e);
   }
 }

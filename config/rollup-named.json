@@ -5,7 +5,11 @@
   ],
   "node_modules/lodash/lodash.js": [
     "defaultTo",
-    "isNil"
+    "isNil",
+    "startsWith",
+    "sum",
+    "unzip",
+    "zip"
   ],
   "node_modules/react/index.js": [
     "useState",
