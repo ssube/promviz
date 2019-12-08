@@ -15,14 +15,20 @@ export interface ClusterGraphProps {
   menu: MenuProps;
 }
 
+function buildCheck(options: MenuProps): (name: string | undefined) => boolean {
+  if (options.filter.regexp) {
+    return (name) => !isNil(name) && new RegExp(options.filter.expr, 'g').test(name);
+  } else {
+    return (name) => startsWith(name, options.filter.expr);
+  }
+}
+
 @observer
 export class ClusterGraph extends React.Component<ClusterGraphProps> {
   render() {
-    const filter = this.props.menu.filter.expr;
-
+    const check = buildCheck(this.props.menu);
     const triwise = zip(this.props.data.labels, this.props.data.parents, this.props.data.values);
-    const needed = triwise.filter(([label]) => startsWith(label, filter));
-    needed.push([filter, '', sum(needed)]);
+    const needed = triwise.filter((row) => check(row[0]));
 
     const [labels, parents, values] = unzip(needed);
     const plops: PlotParams = {

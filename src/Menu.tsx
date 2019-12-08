@@ -18,17 +18,32 @@ export interface MenuProps {
 export class Menu extends React.Component<MenuProps> {
   render() {
     return <nav key='nav-menu'>
-      <span>
-        <label>Filter</label>
-        <input type='text' value={this.props.filter.expr} onChange={(e) => this.onFilterChange(e)} />
-      </span>
-      <span>
-        <label>Source</label>
-        <input type='text' value={this.props.source.url} onChange={(e) => this.onSourceChange(e)} />
-      </span>
-      <span>
+      <section>
+        <label htmlFor='filter-expr'>Filter</label>
+        <input
+          name='filter-expr'
+          type='text'
+          value={this.props.filter.expr}
+          onChange={(e) => this.onFilterChange(e)}
+        />
+        <label htmlFor='filter-regexp'>RegExp</label>
+        <input
+          name='filter-regexp'
+          type='checkbox'
+          checked={this.props.filter.regexp}
+          onChange={(e) => this.onFilterFlag(e)}
+        />
+      </section>
+      <section>
+        <label htmlFor='source-url'>Source</label>
+        <input
+          name='source-url'
+          type='text'
+          value={this.props.source.url}
+          onChange={(e) => this.onSourceChange(e)}
+        />
         <button onClick={() => this.onLoad()}>Load</button>
-      </span>
+      </section>
     </nav>;
   }
 
@@ -38,6 +53,10 @@ export class Menu extends React.Component<MenuProps> {
 
   onFilterChange(e: React.ChangeEvent<HTMLInputElement>) {
     this.props.filter.expr = e.target.value;
+  }
+
+  onFilterFlag(e: React.ChangeEvent<HTMLInputElement>) {
+    this.props.filter.regexp = e.target.checked;
   }
 
   onSourceChange(e: React.ChangeEvent<HTMLInputElement>) {
