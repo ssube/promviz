@@ -25,8 +25,7 @@ export async function main(args: ReadonlyArray<string>): Promise<number> {
     key='app'
     graph={state.graphData}
     menu={state.menuOptions}
-  >
-  </App>, document.getElementById('app-container'));
+  />, document.getElementById('app-container'));
 
   return STATUS_SUCCESS;
 }
