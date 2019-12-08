@@ -6,6 +6,9 @@ Visualize Prometheus metrics as a tree, broken down by namespace and subsystem.
 
 ## Getting Started
 
+- clone this repo
+  - into a gitpod: https://gitpod.io/#https://github.com/ssube/promviz/tree/master
+  - locally: `git clone git@github.com:ssube/promviz.git`
 - get some metric names
   - run `psql -f scripts/index-names.sql` against your [Prometheus SQL adapter database](https://github.com/ssube/prometheus-sql-adapter)
   - or use the included names from `src/resource/names.json`

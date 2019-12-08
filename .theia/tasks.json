@@ -1,0 +1,25 @@
+{
+	"tasks": [
+		{
+			"label": "Test",
+			"type": "shell",
+			"command": "make",
+			"problemMatcher": [
+				"$tsc"
+			]
+		},
+		{
+			"label": "Serve",
+			"type": "shell",
+			"command": "make",
+			"options": {
+				"env": {
+					"SERVE": "TRUE"
+				}
+			},
+			"problemMatcher": [
+				"$tsc"
+			]
+		}
+	]
+}

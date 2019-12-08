@@ -1,30 +1,17 @@
-import { isNil } from 'lodash';
-
-function setOrAdd(m: Map<string, number>, k: string, v: number) {
-  if (m.has(k)) {
-    const pv = m.get(k);
-    if (isNil(pv)) {
-      m.set(k, v);
-    } else {
-      m.set(k, pv + v);
-    }
-  } else {
-    m.set(k, v);
-  }
-}
+import { setOrAdd } from '../utils';
 
 const NAME_SEP = '_';
 
-function splitName(name: string): Array<string> {
+export function splitName(name: string): Array<string> {
   return name.split(NAME_SEP);
 }
 
-function baseName(name: string) {
+export function baseName(name: string) {
   const parts = splitName(name);
   return parts.slice(0, parts.length - 1).join(NAME_SEP);
 }
 
-function defaultName(name: string, root: string) {
+export function parentName(name: string, root: string) {
   if (name.includes(NAME_SEP)) {
     return baseName(name);
   }
@@ -59,7 +46,7 @@ export function parseNames(names: Map<string, number>, rootLabel = 'root'): Grap
 
   return {
     labels: Array.from(values.keys()),
-    parents: Array.from(values.keys()).map((name) => defaultName(name, rootLabel)),
+    parents: Array.from(values.keys()).map((name) => parentName(name, rootLabel)),
     values: Array.from(values.values()),
   };
 }
