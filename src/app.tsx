@@ -8,6 +8,8 @@ import { ClusterGraph } from './graph/ClusterGraph';
 import { Menu, MenuData } from './menu/Menu';
 import EXAMPLE_DATA from './resource/names.json';
 import { VERSION_INFO } from './version';
+import { MENU_DEFAULTS } from './menu/Menu';
+import { cloneDeep } from 'lodash';
 
 const STATUS_SUCCESS = 0;
 
@@ -16,18 +18,7 @@ export async function main(args: ReadonlyArray<string>): Promise<number> {
 
   const state = observable({
     graphData,
-    menuOptions: {
-      chart: {
-        depth: 3,
-      },
-      filter: {
-        expr: '',
-        regexp: false,
-      },
-      source: {
-        url: 'example',
-      },
-    },
+    menuOptions: cloneDeep(MENU_DEFAULTS),
   });
 
   ReactDOM.render(<App
@@ -50,7 +41,7 @@ export class App extends React.Component<AppProps> {
   render() {
     return <section>
       <header>
-        { VERSION_INFO.package.name } - { VERSION_INFO.package.version }
+        {VERSION_INFO.package.name} - {VERSION_INFO.package.version}
       </header>
       <Menu
         {...this.props.menu}
@@ -63,11 +54,11 @@ export class App extends React.Component<AppProps> {
             key='metrics-graph'
             menu={this.props.menu}
           />
-          { this.props.children }
+          {this.props.children}
         </div>
       </section>
       <footer>
-        { VERSION_INFO.git.branch } - { VERSION_INFO.git.commit }
+        {VERSION_INFO.git.branch} - {VERSION_INFO.git.commit}
       </footer>
     </section>;
   }

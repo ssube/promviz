@@ -17,6 +17,19 @@ export interface MenuData {
   };
 }
 
+export const MENU_DEFAULTS: MenuData = {
+  chart: {
+    depth: 3,
+  },
+  filter: {
+    expr: '',
+    regexp: false,
+  },
+  source: {
+    url: 'example',
+  },
+};
+
 export interface MenuProps extends MenuData {
   onLoad: (data: GraphData) => void;
 }

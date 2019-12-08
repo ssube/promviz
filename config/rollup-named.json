@@ -4,6 +4,7 @@
     "use"
   ],
   "node_modules/lodash/lodash.js": [
+    "cloneDeep",
     "defaultTo",
     "isNil",
     "startsWith",
