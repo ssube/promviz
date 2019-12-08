@@ -63,3 +63,16 @@ export function parseNames(names: Map<string, number>, rootLabel = 'root'): Grap
     values: Array.from(values.values()),
   };
 }
+
+export type NameData = Array<{
+  name: string;
+  weight: number;
+}>;
+
+export type NameTuple = [string, number];
+
+export function parseRaw(data: NameData): GraphData {
+  const rawNames = Array.from(data).map((it) => [it.name, it.weight] as NameTuple);
+  const rawData = new Map(rawNames);
+  return parseNames(rawData);
+}

@@ -4,18 +4,15 @@ import { PlotMouseEvent } from 'plotly.js';
 import React from 'react';
 import Plot, { PlotParams } from 'react-plotly.js';
 
-import { MenuProps } from '../Menu';
+import { GraphData } from '.';
+import { MenuData } from '../Menu';
 
 export interface ClusterGraphProps {
-  data: {
-    labels: Array<string>;
-    parents: Array<string>;
-    values: Array<number>;
-  }
-  menu: MenuProps;
+  data: GraphData;
+  menu: MenuData;
 }
 
-function buildCheck(options: MenuProps): (name: string | undefined) => boolean {
+function buildCheck(options: MenuData): (name: string | undefined) => boolean {
   if (options.filter.regexp) {
     return (name) => !isNil(name) && new RegExp(options.filter.expr, 'g').test(name);
   } else {

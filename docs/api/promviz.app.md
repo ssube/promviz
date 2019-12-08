@@ -14,5 +14,6 @@ export declare class App extends React.Component<AppProps>
 
 |  Method | Modifiers | Description |
 |  --- | --- | --- |
+|  [onLoad(data)](./promviz.app.onload.md) |  |  |
 |  [render()](./promviz.app.render.md) |  |  |
 

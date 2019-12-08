@@ -1,7 +1,10 @@
 import { observer } from 'mobx-react';
 import React from 'react';
 
-export interface MenuProps {
+import { GraphData, parseNames, parseRaw, NameData } from './graph';
+import EXAMPLE_DATA from './resource/names.json';
+
+export interface MenuData {
   filter: {
     expr: string;
     regexp: boolean;
@@ -9,6 +12,10 @@ export interface MenuProps {
   source: {
     url: string;
   };
+}
+
+export interface MenuProps extends MenuData {
+  onLoad: (data: GraphData) => void;
 }
 
 @observer
@@ -44,8 +51,21 @@ export class Menu extends React.Component<MenuProps> {
     </nav>;
   }
 
-  onLoad() {
+  async loadData(url: string): Promise<GraphData> {
+    if (url === 'example') {
+      return parseRaw(EXAMPLE_DATA as NameData);
+    } else {
+      const resp = await fetch(url);
+      const data = await resp.json();
+      return parseRaw(data as NameData);
+    }
+  }
+
+  async onLoad() {
     console.log('load source', this.props.source);
+    const url = this.props.source.url;
+    const data = await this.loadData(url);
+    this.props.onLoad(data);
   }
 
   onFilterChange(e: React.ChangeEvent<HTMLInputElement>) {
