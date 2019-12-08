@@ -5,16 +5,20 @@
 
 config/
 deploy/
+docs/example-*
 node_modules/
+out/*.db
+out/*.html
+out/*.json
+out/*.map
+out/api/
 out/cache/
 out/coverage/
 out/coverage-*
 out/docs/
 out/typings/
-out/*.db
-out/*.html
-out/*.json
-out/test-*
+out/src/
+out/test/
 out/tmp/
 scripts/
 src/
