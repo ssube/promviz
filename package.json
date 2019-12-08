@@ -55,7 +55,7 @@
     "typescript": "3.7.3"
   },
   "name": "promviz",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "prometheus metrics visualizer",
   "main": "out/index.js",
   "author": "Sean Sube <seansube@gmail.com>",
