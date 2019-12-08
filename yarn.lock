@@ -6705,7 +6705,7 @@ stack-trace@0.0.9:
   resolved "https://artifacts.apextoaster.com/repository/group-npm/stack-trace/-/stack-trace-0.0.9.tgz#a8f6eaeca90674c333e7c43953f275b451510695"
   integrity sha1-qPbq7KkGdMMz58Q5U/J1tFFRBpU=
 
-standard-version@^7.0.1:
+standard-version@7.0.1:
   version "7.0.1"
   resolved "https://artifacts.apextoaster.com/repository/group-npm/standard-version/-/standard-version-7.0.1.tgz#33e950cf5c571ae0358a7ffae2292aa4547dc504"
   integrity sha512-3GR9dPlNpC/osTwb9YsU2KQelGvSORMPUFN7zOUE3HN4yjCTsT57IJAFsyPXPP512QDMSxwwjhxa8Em5vF5F5Q==

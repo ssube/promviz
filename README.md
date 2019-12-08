@@ -2,7 +2,7 @@
 
 Visualize Prometheus metrics as a tree, broken down by namespace and subsystem.
 
-![example sunburst diagram of weighted metrics](docs/example.png)
+![example sunburst diagram of weighted metrics](docs/example-load.png)
 
 ## Getting Started
 
