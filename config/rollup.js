@@ -6,10 +6,13 @@ import multiEntry from 'rollup-plugin-multi-entry';
 import externals from 'rollup-plugin-node-externals';
 import resolve from 'rollup-plugin-node-resolve';
 import replace from 'rollup-plugin-replace';
+import serve from 'rollup-plugin-serve';
 import typescript from 'rollup-plugin-typescript2';
 import yaml from 'rollup-plugin-yaml';
 
-const debug = process.env['DEBUG'] === 'TRUE';
+const flag_debug = process.env['DEBUG'] === 'TRUE';
+const flag_serve = process.env['SERVE'] === 'TRUE';
+
 const metadata = require('../package.json');
 
 const external = require('./rollup-external.json').names;
@@ -134,6 +137,17 @@ const bundle = {
 		}),
 	],
 };
+
+if (flag_serve) {
+	bundle.plugins.push(serve({
+		open: true,
+		verbose: true,
+		contentBase: join(rootPath, 'out'),
+		mimeTypes: {
+			'application/javascript': ['mjs'],
+		},
+	}));
+}
 
 export default [
 	bundle,
