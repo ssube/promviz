@@ -1,9 +1,6 @@
 tasks:
-  - name: test
-    command: make
-  - name: serve
-    before: make
-    command: 'SERVE=TRUE make'
+  - name: yarn
+    command: make yarn-install
 ports:
   - port: 10001
     onOpen: ignore
