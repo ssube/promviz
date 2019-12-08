@@ -26,33 +26,37 @@ function buildCheck(options: MenuProps): (name: string | undefined) => boolean {
 @observer
 export class ClusterGraph extends React.Component<ClusterGraphProps> {
   render() {
-    const check = buildCheck(this.props.menu);
-    const triwise = zip(this.props.data.labels, this.props.data.parents, this.props.data.values);
-    const needed = triwise.filter((row) => check(row[0]));
+    try {
+      const check = buildCheck(this.props.menu);
+      const triwise = zip(this.props.data.labels, this.props.data.parents, this.props.data.values);
+      const needed = triwise.filter((row) => check(row[0]));
 
-    const [labels, parents, values] = unzip(needed);
-    const plops: PlotParams = {
-      config: {
-        fillFrame: true,
-        responsive: true,
-        scrollZoom: true,
-      },
-      data: [{
-        labels,
-        branchvalues: 'total',
-        maxdepth: 3,
-        parents,
-        type: 'sunburst',
-        values,
-      } as any],
-      layout: {
-        autosize: true,
-      },
-      onClick: (e) => this.onClick(e),
-      useResizeHandler: true,
-    };
+      const [labels, parents, values] = unzip(needed);
+      const plops: PlotParams = {
+        config: {
+          fillFrame: true,
+          responsive: true,
+          scrollZoom: true,
+        },
+        data: [{
+          labels,
+          branchvalues: 'total',
+          maxdepth: 3,
+          parents,
+          type: 'sunburst',
+          values,
+        } as any],
+        layout: {
+          autosize: true,
+        },
+        onClick: (e) => this.onClick(e),
+        useResizeHandler: true,
+      };
 
-    return <Plot {...plops} />;
+      return <Plot {...plops} />;
+    } catch (err) {
+      return <span>{ err.message }</span>;
+    }
   }
 
   onClick(e: Readonly<PlotMouseEvent>) {
