@@ -1,22 +1,23 @@
-import { isNil, startsWith, unzip, zip } from 'lodash';
+import { startsWith, unzip, zip } from 'lodash';
 import { observer } from 'mobx-react';
 import { PlotMouseEvent } from 'plotly.js';
 import React from 'react';
 import Plot, { PlotParams } from 'react-plotly.js';
 
 import { GraphData } from '.';
-import { MenuData } from '../Menu';
+import { MenuData } from '../menu/Menu';
+import { doesExist, Maybe, Predicate } from '../utils';
 
 export interface ClusterGraphProps {
   data: GraphData;
   menu: MenuData;
 }
 
-function buildCheck(options: MenuData): (name: string | undefined) => boolean {
+function buildCheck(options: MenuData): Predicate<Maybe<string>> {
   if (options.filter.regexp) {
-    return (name) => (!isNil(name) && new RegExp(options.filter.expr, 'g').test(name));
+    return ((name) => doesExist(name) && new RegExp(options.filter.expr, 'g').test(name));
   } else {
-    return (name) => startsWith(name, options.filter.expr);
+    return ((name) => doesExist(name) && startsWith(name, options.filter.expr));
   }
 }
 

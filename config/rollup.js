@@ -1,4 +1,4 @@
-import { join } from 'path';
+import { join, sep } from 'path';
 import commonjs from 'rollup-plugin-commonjs';
 import { eslint } from 'rollup-plugin-eslint';
 import json from 'rollup-plugin-json';
@@ -28,13 +28,38 @@ const bundle = {
 	input: {
 		include: [
 			join(rootPath, 'src', 'app.tsx'),
+			join(rootPath, 'test', 'harness.ts'),
+			join(rootPath, 'test', '**', 'Test*.ts'),
 		],
+	},
+	manualChunks(id) {
+		if (id.match(/commonjs-external/i) || id.match(/commonjsHelpers/)) {
+			return 'vendor';
+		}
+
+		if (id.includes(`${sep}node_modules${sep}`)) {
+			return 'vendor';
+		}
+
+		if (id.includes(`${sep}test${sep}`)) {
+			return 'test';
+		}
+
+		if (id.includes(`${sep}src${sep}index`)) {
+			return 'index';
+		}
+
+		if (id.includes(`${sep}src${sep}`)) {
+			return 'main';
+		}
+
+		return 'nochunk';
 	},
 	output: {
 		dir: targetPath,
-		chunkFileNames: '[name].js',
-		entryFileNames: 'entry-[name].js',
-		format: 'iife',
+		chunkFileNames: '[name].mjs',
+		entryFileNames: 'index.js',
+		format: 'esm',
 		globals,
 		name: 'promviz',
 		sourcemap: true,
@@ -79,8 +104,8 @@ const bundle = {
 				join('node_modules', 'plotly.js', 'dist', '*.js'),
 			],
 			values: {
-				'd3_document = this.document': 'd3_document = self.document',
-				'this.navigator': 'self.navigator',
+				'd3_document = this.document': 'd3_document = window.document',
+				'this.navigator': 'window.navigator',
 				'this[d3_vendorSymbol(this': 'window[d3_vendorSymbol(window',
 			},
 		}),

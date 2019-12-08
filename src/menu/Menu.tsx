@@ -1,8 +1,8 @@
 import { observer } from 'mobx-react';
 import React from 'react';
 
-import { GraphData, parseNames, parseRaw, NameData } from './graph';
-import EXAMPLE_DATA from './resource/names.json';
+import { GraphData, NameData, parseRaw } from '../graph';
+import EXAMPLE_DATA from '../resource/names.json';
 
 export interface MenuData {
   chart: {
@@ -30,8 +30,8 @@ export class Menu extends React.Component<MenuProps> {
         <input
           name='chart-depth'
           type='number'
-          min={0}
-          max={6}
+          min={2}
+          max={7}
           value={this.props.chart.depth}
           onChange={(e) => this.onChartDepth(e)}
         />

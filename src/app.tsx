@@ -5,7 +5,7 @@ import ReactDOM from 'react-dom';
 
 import { GraphData, NameData, parseRaw } from './graph';
 import { ClusterGraph } from './graph/ClusterGraph';
-import { Menu, MenuData } from './Menu';
+import { Menu, MenuData } from './menu/Menu';
 import EXAMPLE_DATA from './resource/names.json';
 import { VERSION_INFO } from './version';
 
