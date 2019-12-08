@@ -60,5 +60,8 @@
   "description": "prometheus metrics visualizer",
   "main": "out/index.js",
   "author": "Sean Sube <seansube@gmail.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org"
+  }
 }
