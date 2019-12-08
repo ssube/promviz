@@ -17,6 +17,9 @@ export async function main(args: ReadonlyArray<string>): Promise<number> {
   const state = observable({
     graphData,
     menuOptions: {
+      chart: {
+        depth: 3,
+      },
       filter: {
         expr: '',
         regexp: false,

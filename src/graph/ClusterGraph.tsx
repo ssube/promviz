@@ -14,7 +14,7 @@ export interface ClusterGraphProps {
 
 function buildCheck(options: MenuData): (name: string | undefined) => boolean {
   if (options.filter.regexp) {
-    return (name) => !isNil(name) && new RegExp(options.filter.expr, 'g').test(name);
+    return (name) => (!isNil(name) && new RegExp(options.filter.expr, 'g').test(name));
   } else {
     return (name) => startsWith(name, options.filter.expr);
   }
@@ -38,7 +38,7 @@ export class ClusterGraph extends React.Component<ClusterGraphProps> {
         data: [{
           labels,
           branchvalues: 'total',
-          maxdepth: 3,
+          maxdepth: this.props.menu.chart.depth,
           parents,
           type: 'sunburst',
           values,

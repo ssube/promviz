@@ -5,6 +5,9 @@ import { GraphData, parseNames, parseRaw, NameData } from './graph';
 import EXAMPLE_DATA from './resource/names.json';
 
 export interface MenuData {
+  chart: {
+    depth: number;
+  };
   filter: {
     expr: string;
     regexp: boolean;
@@ -22,6 +25,17 @@ export interface MenuProps extends MenuData {
 export class Menu extends React.Component<MenuProps> {
   render() {
     return <nav key='nav-menu'>
+      <section>
+        <label htmlFor='chart-depth'>Depth</label>
+        <input
+          name='chart-depth'
+          type='number'
+          min={0}
+          max={6}
+          value={this.props.chart.depth}
+          onChange={(e) => this.onChartDepth(e)}
+        />
+      </section>
       <section>
         <label htmlFor='filter-expr'>Filter</label>
         <input
@@ -78,5 +92,9 @@ export class Menu extends React.Component<MenuProps> {
 
   onSourceChange(e: React.ChangeEvent<HTMLInputElement>) {
     this.props.source.url = e.target.value;
+  }
+
+  onChartDepth(e: React.ChangeEvent<HTMLInputElement>) {
+    this.props.chart.depth = e.target.valueAsNumber;
   }
 }
