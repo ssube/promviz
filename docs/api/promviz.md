@@ -4,3 +4,15 @@
 
 ## promviz package
 
+## Classes
+
+|  Class | Description |
+|  --- | --- |
+|  [App](./promviz.app.md) |  |
+
+## Functions
+
+|  Function | Description |
+|  --- | --- |
+|  [main(args)](./promviz.main.md) |  |
+

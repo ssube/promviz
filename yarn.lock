@@ -4265,6 +4265,11 @@ mobx-react@^6.1.4:
   dependencies:
     mobx-react-lite "^1.4.2"
 
+mobx@^5.15.0:
+  version "5.15.0"
+  resolved "https://artifacts.apextoaster.com/repository/group-npm/mobx/-/mobx-5.15.0.tgz#3ef34ac4965169698eff6df72f18c2a735e8e7f8"
+  integrity sha512-Ax7vE32zBRgO0A3Yu12RXaFwIhBzpGQXZjRHiDvKLrqpDEijhNTSuXJ1Ci+L30BSa/Mb3by9+3nuKq15YoH5dA==
+
 mocha@6.2.2:
   version "6.2.2"
   resolved "https://artifacts.apextoaster.com/repository/group-npm/mocha/-/mocha-6.2.2.tgz#5d8987e28940caf8957a7d7664b910dc5b2fea20"

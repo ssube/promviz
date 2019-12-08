@@ -1,4 +1,4 @@
-import { isNil, defaultTo } from 'lodash';
+import { isNil } from 'lodash';
 
 function setOrAdd(m: Map<string, number>, k: string, v: number) {
   if (m.has(k)) {
@@ -36,7 +36,13 @@ function defaultName(name: string, root: string) {
   return root;
 }
 
-export function parseNames(names: Map<string, number>, rootLabel = 'root') {
+export interface GraphData {
+  labels: Array<string>;
+  parents: Array<string>;
+  values: Array<number>;
+}
+
+export function parseNames(names: Map<string, number>, rootLabel = 'root'): GraphData {
   let total = 0;
   const values = new Map<string, number>();
   for (const [name, weight] of names) {

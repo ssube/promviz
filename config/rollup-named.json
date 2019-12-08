@@ -6,5 +6,21 @@
   "node_modules/lodash/lodash.js": [
     "defaultTo",
     "isNil"
+  ],
+  "node_modules/react/index.js": [
+    "useState",
+    "useRef",
+    "useMemo",
+    "useEffect",
+    "useCallback",
+    "useDebugValue",
+    "memo",
+    "forwardRef",
+    "Component",
+    "PureComponent",
+    "createElement"
+  ],
+  "node_modules/react-dom/index.js": [
+    "unstable_batchedUpdates"
   ]
 }
