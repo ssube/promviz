@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.2.2](https://git.apextoaster.com/ssube/promviz/compare/v0.2.1...v0.2.2) (2019-12-09)
+
+
+### Bug Fixes
+
+* **build:** code coverage ([b09708c](https://git.apextoaster.com/ssube/promviz/commit/b09708c87534ab49e1791739b706ebd5e51f4325))
+* **build:** exclude example images and source maps from npm package ([71a82d2](https://git.apextoaster.com/ssube/promviz/commit/71a82d2c96d596f78c68a6738df47397d79156c1))
+* **build:** publish to global npm registry ([6352ed0](https://git.apextoaster.com/ssube/promviz/commit/6352ed04e4fbf527c154342fa2ea1b4741371e22))
+* **build:** separate html target ([d4feacd](https://git.apextoaster.com/ssube/promviz/commit/d4feacd0b53729898fc02a5d9cf7ff20e947ce23))
+* **tests:** run tests ([3c00a14](https://git.apextoaster.com/ssube/promviz/commit/3c00a14e4f2050fc83eba184026e01dcc2a1cc2d))
+
 ### [0.2.1](https://git.apextoaster.com/ssube/promviz/compare/v0.2.0...v0.2.1) (2019-12-08)
 
 
