@@ -60,7 +60,7 @@ const bundle = {
 	},
 	output: {
 		dir: targetPath,
-		chunkFileNames: '[name].mjs',
+		chunkFileNames: '[name].js',
 		entryFileNames: 'index.js',
 		format: 'esm',
 		globals,

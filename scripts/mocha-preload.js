@@ -1,7 +1,5 @@
-import JSDOM from 'jsdom-global';
-import sourceMapSupport from 'source-map-support';
-
-export const jsdom = JSDOM();
+export const jsdom = require('jsdom-global')();
+const sourceMapSupport = require('source-map-support');
 
 sourceMapSupport.install({
   environment: 'node',

@@ -1,7 +1,5 @@
-#! /usr/bin/env node
 // mocha loader for es6 modules
-import { jsdom } from './mocha-preload';
-import '../out/test.mjs';
+const { jsdom } = require('./mocha-preload');
 
+require('../out/test');
 console.log('tests loaded');
-jsdom();

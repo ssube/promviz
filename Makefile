@@ -95,8 +95,8 @@ build: ## builds, bundles, and tests the application
 build: build-bundle build-docs
 
 build-bundle: node_modules
-	$(NODE_BIN)/rollup --config $(CONFIG_PATH)/rollup.js
 	cp -v $(SOURCE_PATH)/index.html $(TARGET_PATH)/index.html
+	$(NODE_BIN)/rollup --config $(CONFIG_PATH)/rollup.js
 
 build-docs: ## generate html docs
 	$(NODE_BIN)/api-extractor run --config $(CONFIG_PATH)/api-extractor.json --local -v
@@ -109,7 +109,10 @@ test: ## run mocha unit tests
 test: test-cover
 
 test-check: ## run mocha unit tests with coverage reports
-	$(NODE_BIN)/nyc $(COVER_OPTS) $(NODE_BIN)/mocha $(MOCHA_OPTS) --require esm $(SCRIPT_PATH)/mocha-module.js
+	$(NODE_BIN)/nyc $(COVER_OPTS) \
+		$(NODE_BIN)/mocha $(MOCHA_OPTS) \
+		--require esm \
+		$(SCRIPT_PATH)/mocha-module.js
 
 test-cover: ## run mocha unit tests with coverage reports
 test-cover: test-check
