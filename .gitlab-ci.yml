@@ -140,20 +140,3 @@ github-success:
   when: on_success
   script:
     - ./scripts/github-status.sh success
-
-sonar-success:
-  stage: status-post
-  extends:
-    - .build-sonar
-
-  when: on_success
-  script:
-    - make node_modules
-    - sonar-scanner
-        -Dsonar.projectKey=ssube_rollup-template
-        -Dsonar.projectVersion=${CI_COMMIT_REF_SLUG}
-        -Dsonar.organization=ssube-github
-        -Dsonar.sources=src/,test/
-        -Dsonar.host.url=https://sonarcloud.io
-        -Dsonar.login=${SONAR_SECRET}
-        -Dsonar.typescript.lcov.reportPaths=out/coverage/lcov.info
