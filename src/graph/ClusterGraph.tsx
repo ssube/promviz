@@ -5,7 +5,7 @@ import React from 'react';
 import Plot, { PlotParams } from 'react-plotly.js';
 
 import { GraphData } from '.';
-import { MenuData } from '../menu/Menu';
+import { MenuData } from '../menu';
 import { doesExist, Maybe, Predicate } from '../utils';
 
 export interface ClusterGraphProps {

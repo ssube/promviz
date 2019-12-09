@@ -1,3 +1,4 @@
+import { cloneDeep } from 'lodash';
 import { observable } from 'mobx';
 import { observer } from 'mobx-react';
 import React from 'react';
@@ -5,26 +6,23 @@ import ReactDOM from 'react-dom';
 
 import { GraphData, NameData, parseRaw } from './graph';
 import { ClusterGraph } from './graph/ClusterGraph';
-import { Menu, MenuData } from './menu/Menu';
+import { Menu, MENU_DEFAULTS, MenuData } from './menu';
 import EXAMPLE_DATA from './resource/names.json';
 import { VERSION_INFO } from './version';
-import { MENU_DEFAULTS } from './menu/Menu';
-import { cloneDeep } from 'lodash';
 
 const STATUS_SUCCESS = 0;
 
 export async function main(args: ReadonlyArray<string>): Promise<number> {
-  const graphData = parseRaw(EXAMPLE_DATA as NameData);
-
+  const graph = parseRaw(EXAMPLE_DATA as NameData);
   const state = observable({
-    graphData,
-    menuOptions: cloneDeep(MENU_DEFAULTS),
+    graph,
+    menu: cloneDeep(MENU_DEFAULTS),
   });
 
   ReactDOM.render(<App
     key='app'
-    graph={state.graphData}
-    menu={state.menuOptions}
+    graph={state.graph}
+    menu={state.menu}
   />, document.getElementById('app-container'));
 
   return STATUS_SUCCESS;
