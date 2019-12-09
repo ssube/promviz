@@ -1,6 +1,7 @@
 {
 	"names": [
 		"async_hooks",
+		"mocha",
 		"sinon",
 		"source-map-support"
 	]

@@ -47,7 +47,7 @@ export NODE_OPTIONS ?= --max-old-space-size=4000
 
 # Tool options
 COVER_OPTS	?= --reporter=lcov --reporter=text-summary --reporter=html --report-dir="$(TARGET_PATH)/coverage" --exclude-after-remap
-MOCHA_OPTS  ?= --check-leaks --colors --sort --ui bdd --experimental-modules
+MOCHA_OPTS  ?= --check-leaks --colors --sort --ui bdd # --experimental-modules
 RELEASE_OPTS ?= --commit-all
 
 .PHONY: all clean clean-deps clean-target configure help todo
@@ -109,7 +109,7 @@ test: ## run mocha unit tests
 test: test-cover
 
 test-check: ## run mocha unit tests with coverage reports
-	$(NODE_BIN)/nyc $(COVER_OPTS) $(NODE_BIN)/mocha $(MOCHA_OPTS) $(SCRIPT_PATH)/mocha-module.js
+	$(NODE_BIN)/nyc $(COVER_OPTS) $(NODE_BIN)/mocha $(MOCHA_OPTS) --require esm $(SCRIPT_PATH)/mocha-module.js
 
 test-cover: ## run mocha unit tests with coverage reports
 test-cover: test-check

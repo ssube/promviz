@@ -13,3 +13,4 @@ temp/
 
 package-lock.json
 yarn-error.log
+report.*

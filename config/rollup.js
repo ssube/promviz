@@ -99,7 +99,7 @@ const bundle = {
 		}),
 		/* fix react: https://github.com/rollup/rollup/issues/487 */
 		replace({
-      'process.env.NODE_ENV': JSON.stringify( 'production' )
+			'process.env.NODE_ENV': JSON.stringify( 'production' ),
 		}),
 		/* fix plotly/d3: https://github.com/plotly/plotly.js/issues/3518 */
 		replace({
@@ -110,6 +110,7 @@ const bundle = {
 				'd3_document = this.document': 'd3_document = window.document',
 				'this.navigator': 'window.navigator',
 				'this[d3_vendorSymbol(this': 'window[d3_vendorSymbol(window',
+				'new DOMParser': 'new window.DOMParser',
 			},
 		}),
 		resolve({
