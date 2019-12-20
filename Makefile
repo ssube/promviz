@@ -165,4 +165,14 @@ upload-climate:
 upload-codecov:
 	codecov --disable=gcov --file=$(TARGET_PATH)/coverage/lcov.info --token=$(shell echo "${CODECOV_SECRET}" | base64 -d)
 
+upload-sonar: node_modules
+	sonar-scanner \
+		-Dsonar.projectKey=${CI_PROJECT_NAMESPACE}_${CI_PROJECT_NAME} \
+		-Dsonar.projectVersion=${CI_COMMIT_REF_SLUG} \
+		-Dsonar.organization=${CI_PROJECT_NAMESPACE}-github \
+		-Dsonar.sources=src/,test/ \
+		-Dsonar.host.url=https://sonarcloud.io \
+		-Dsonar.login=${SONAR_SECRET} \
+		-Dsonar.typescript.lcov.reportPaths=out/coverage/lcov.info
+
 include $(shell find $(ROOT_PATH) -name '*.mk' | grep -v node_modules)
