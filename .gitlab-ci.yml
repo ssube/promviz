@@ -55,7 +55,7 @@ build-image-alpine-tag:
   variables:
     IMAGE_ARCH: alpine
 
-build-image-stretch-branch:
+build-image-buster-branch:
   stage: image
   extends: [.build-docker]
   except:
@@ -63,9 +63,9 @@ build-image-stretch-branch:
   script:
     - ./scripts/docker-build.sh --push
   variables:
-    IMAGE_ARCH: stretch
+    IMAGE_ARCH: buster
 
-build-image-stretch-tag:
+build-image-buster-tag:
   stage: image
   extends:
     - .build-docker
@@ -74,7 +74,7 @@ build-image-stretch-tag:
   script:
     - ./scripts/docker-build.sh --push
   variables:
-    IMAGE_ARCH: stretch
+    IMAGE_ARCH: buster
 
 # publish jobs
 publish-npm:
