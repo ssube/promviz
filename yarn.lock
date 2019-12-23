@@ -159,6 +159,11 @@
     js-yaml "^3.13.1"
     resolve-from "^5.0.0"
 
+"@istanbuljs/nyc-config-typescript@1.0.0":
+  version "1.0.0"
+  resolved "https://artifacts.apextoaster.com/repository/group-npm/@istanbuljs/nyc-config-typescript/-/nyc-config-typescript-1.0.0.tgz#abcffd22f57d791ba0ce2ae97257d20b86a276ba"
+  integrity sha512-Tj+pw6X60BMKd4F6LqS7t2p247ZtTTimGEtzoSr053168pHbzbBRjq/mTtdf67olDD9BLyonbc63CdtMhplK+w==
+
 "@istanbuljs/schema@^0.1.2":
   version "0.1.2"
   resolved "https://artifacts.apextoaster.com/repository/group-npm/@istanbuljs/schema/-/schema-0.1.2.tgz#26520bf09abe4a5644cd5414e37125a8954241dd"
