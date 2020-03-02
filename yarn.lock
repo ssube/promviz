@@ -3745,20 +3745,19 @@ gl-heatmap2d@^1.0.5:
     iota-array "^1.0.0"
     typedarray-pool "^1.1.0"
 
-gl-line3d@^1.1.11:
-  version "1.1.11"
-  resolved "https://artifacts.apextoaster.com/repository/group-npm/gl-line3d/-/gl-line3d-1.1.11.tgz#53180030ddb841097d0f8ccb1d04ea8fe2759ddc"
-  integrity sha512-EitFKPEEYdn/ivFOxJ8khSi0BzNum4sXZFLq6SQq21MX5YPCYb0o+XzjpWNuU32BoXORBC78B1JTiQqnTaWhWQ==
+gl-line3d@1.2.0:
+  version "1.2.0"
+  resolved "https://artifacts.apextoaster.com/repository/group-npm/gl-line3d/-/gl-line3d-1.2.0.tgz#038d339b8986e602af90dd9663f83678db64247c"
+  integrity sha512-du9GDF87DMfllND2pBjySyHhFaza9upw4t2GMoXn11/I38atO6+saiznuhKmfxuDnyxGdmmZF6/HPauk0owKDA==
   dependencies:
     binary-search-bounds "^2.0.4"
-    gl-buffer "^2.0.8"
+    gl-buffer "^2.1.2"
     gl-shader "^4.2.1"
-    gl-texture2d "^2.0.2"
-    gl-vao "^1.1.3"
+    gl-texture2d "^2.1.0"
+    gl-vao "^1.3.0"
     glsl-out-of-range "^1.0.4"
-    glsl-read-float "^1.0.0"
     glslify "^7.0.0"
-    ndarray "^1.0.16"
+    ndarray "^1.0.18"
 
 gl-mat2@^1.0.0:
   version "1.0.1"
@@ -3823,10 +3822,10 @@ gl-plot2d@^1.4.3:
     glslify "^7.0.0"
     text-cache "^4.2.1"
 
-gl-plot3d@^2.4.2:
-  version "2.4.2"
-  resolved "https://artifacts.apextoaster.com/repository/group-npm/gl-plot3d/-/gl-plot3d-2.4.2.tgz#3c73a00c33ad4a91ca4da0cf74a11fc0870e5044"
-  integrity sha512-nBLTqKCLOlPnf/8kWJdZxZTdcK7U0KqHO13T08dakfv2a1xiiy4qgqjjI42UXZOkthrqyt4VszBQ/D4qBgTHBw==
+gl-plot3d@^2.4.4:
+  version "2.4.4"
+  resolved "https://artifacts.apextoaster.com/repository/group-npm/gl-plot3d/-/gl-plot3d-2.4.4.tgz#5fb8f60ae36ac55036af5566efc29c9adbe06a30"
+  integrity sha512-R/V4hSrE2sFD+Xls7D6qCOlWCRmqtUff0sKbeFJdI91HfFzPJPiy9Pqa/Jh2UsvdmwkkSQPNDcBvLd6TvhRC/g==
   dependencies:
     "3d-view" "^2.0.0"
     a-big-triangle "^1.0.3"
@@ -3838,7 +3837,7 @@ gl-plot3d@^2.4.2:
     gl-spikes3d "^1.0.9"
     glslify "^7.0.0"
     has-passive-events "^1.0.0"
-    is-mobile "^2.1.0"
+    is-mobile "^2.2.0"
     mouse-change "^1.4.0"
     mouse-event-offset "^3.0.2"
     mouse-wheel "^1.2.0"
@@ -4001,7 +4000,7 @@ gl-text@^1.1.8:
     to-px "^1.0.1"
     typedarray-pool "^1.1.0"
 
-gl-texture2d@^2.0.0, gl-texture2d@^2.0.2, gl-texture2d@^2.0.8, gl-texture2d@^2.1.0:
+gl-texture2d@^2.0.0, gl-texture2d@^2.0.8, gl-texture2d@^2.1.0:
   version "2.1.0"
   resolved "https://artifacts.apextoaster.com/repository/group-npm/gl-texture2d/-/gl-texture2d-2.1.0.tgz#ff6824e7e7c31a8ba6fdcdbe9e5c695d7e2187c7"
   integrity sha1-/2gk5+fDGoum/c2+nlxpXX4hh8c=
@@ -4119,11 +4118,6 @@ glsl-out-of-range@^1.0.4:
   version "1.0.4"
   resolved "https://artifacts.apextoaster.com/repository/group-npm/glsl-out-of-range/-/glsl-out-of-range-1.0.4.tgz#3d73d083bc9ecc73efd45dfc7063c29e92c9c873"
   integrity sha512-fCcDu2LCQ39VBvfe1FbhuazXEf0CqMZI9OYXrYlL6uUARG48CTAbL04+tZBtVM0zo1Ljx4OLu2AxNquq++lxWQ==
-
-glsl-read-float@^1.0.0:
-  version "1.1.0"
-  resolved "https://artifacts.apextoaster.com/repository/group-npm/glsl-read-float/-/glsl-read-float-1.1.0.tgz#dfb088b0162dcfcc56fc4eddd2f86e18cac32f26"
-  integrity sha1-37CIsBYtz8xW/E7d0vhuGMrDLyY=
 
 glsl-resolve@0.0.1:
   version "0.0.1"
@@ -4682,10 +4676,10 @@ is-iexplorer@^1.0.0:
   resolved "https://artifacts.apextoaster.com/repository/group-npm/is-iexplorer/-/is-iexplorer-1.0.0.tgz#1d72bc66d3fe22eaf6170dda8cf10943248cfc76"
   integrity sha1-HXK8ZtP+Iur2Fw3ajPEJQySM/HY=
 
-is-mobile@^2.1.0:
-  version "2.1.0"
-  resolved "https://artifacts.apextoaster.com/repository/group-npm/is-mobile/-/is-mobile-2.1.0.tgz#4c0cab72f3358dd9986007389b30729fae80da0b"
-  integrity sha512-M5OhlZwh+aTlmRUvDg0Wq3uWVNa+w4DyZ2SjbrS+BhSLu9Po+JXHendC305ZEu+Hh7lywb19Zu4kYXu3L1Oo8A==
+is-mobile@^2.2.0:
+  version "2.2.1"
+  resolved "https://artifacts.apextoaster.com/repository/group-npm/is-mobile/-/is-mobile-2.2.1.tgz#10f2320012c410cc285feecb13406bd586f1b2f8"
+  integrity sha512-6zELsfVFr326eq2CI53yvqq6YBanOxKBybwDT+MbMS2laBnK6Ez8m5XHSuTQQbnKRfpDzCod1CMWW5q3wZYMvA==
 
 is-module@^1.0.0:
   version "1.0.0"
@@ -6342,10 +6336,10 @@ planar-graph-to-polyline@^1.0.0:
     two-product "^1.0.0"
     uniq "^1.0.0"
 
-plotly.js@1.52.2:
-  version "1.52.2"
-  resolved "https://artifacts.apextoaster.com/repository/group-npm/plotly.js/-/plotly.js-1.52.2.tgz#c4511caf457b95a07a6cac4b5a4d0591483a3b15"
-  integrity sha512-EZHr2ekxVNjucmNhku+JiLFoLV1wH6gW15T/6SFqtHFMvJZY4HeZogtRUPTLijXBPfusMWxxIKEDTzlMOLXajQ==
+plotly.js@1.52.3:
+  version "1.52.3"
+  resolved "https://artifacts.apextoaster.com/repository/group-npm/plotly.js/-/plotly.js-1.52.3.tgz#2ae534811447d053765d9c2a8829878dc1f3c489"
+  integrity sha512-7szNqbVuhqn4ZgaTpJ9h4+9PzjoXJnSdzjnY5QwHddp/j0xu5kpHCGvkg+WmeF3brK3y8qwEHF/MIFBBa7i0ng==
   dependencies:
     "@plotly/d3-sankey" "0.7.2"
     "@plotly/d3-sankey-circular" "0.33.1"
@@ -6369,11 +6363,11 @@ plotly.js@1.52.2:
     gl-contour2d "^1.1.6"
     gl-error3d "^1.0.15"
     gl-heatmap2d "^1.0.5"
-    gl-line3d "^1.1.11"
+    gl-line3d "1.2.0"
     gl-mat4 "^1.2.0"
     gl-mesh3d "^2.3.0"
     gl-plot2d "^1.4.3"
-    gl-plot3d "^2.4.2"
+    gl-plot3d "^2.4.4"
     gl-pointcloud2d "^1.0.2"
     gl-scatter3d "^1.2.2"
     gl-select-box "^1.0.3"
@@ -6384,7 +6378,7 @@ plotly.js@1.52.2:
     glslify "^7.0.0"
     has-hover "^1.0.1"
     has-passive-events "^1.0.0"
-    is-mobile "^2.1.0"
+    is-mobile "^2.2.0"
     mapbox-gl "1.3.2"
     matrix-camera-controller "^2.1.3"
     mouse-change "^1.4.0"
