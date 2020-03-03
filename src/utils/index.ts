@@ -1,5 +1,6 @@
 import { isNil } from 'lodash';
 
+/* eslint-disable-next-line @typescript-eslint/ban-types */
 export type Maybe<TValue> = TValue | null | undefined;
 export type Predicate<TValue> = (v: TValue) => boolean;
 
