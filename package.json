@@ -32,7 +32,7 @@
     "eslint-plugin-react": "7.19.0",
     "eslint-plugin-sonarjs": "0.5.0",
     "esm": "3.2.25",
-    "jsdom": "16.2.0",
+    "jsdom": "16.2.1",
     "jsdom-global": "3.0.2",
     "lodash": "4.17.15",
     "mobx": "5.15.4",
