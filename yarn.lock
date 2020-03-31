@@ -3988,10 +3988,10 @@ gl-streamtube3d@^1.4.0:
     glsl-specular-cook-torrance "^2.0.1"
     glslify "^7.0.0"
 
-gl-surface3d@^1.4.6:
-  version "1.4.6"
-  resolved "https://artifacts.apextoaster.com/repository/group-npm/gl-surface3d/-/gl-surface3d-1.4.6.tgz#a426c704526b558a3fcfa878402b45a6af1ff128"
-  integrity sha512-aItWQTNUX3JJc6i2FbXX82ljPZgDV3kXzkzANcBGoAnKwRpJw12WcMKKTL4sOCs9BW+3sx6BhR0P5+2zh5Scfw==
+gl-surface3d@^1.5.1:
+  version "1.5.1"
+  resolved "https://artifacts.apextoaster.com/repository/group-npm/gl-surface3d/-/gl-surface3d-1.5.1.tgz#a0a3c9e2573b1487e6a5253774f56708312a04db"
+  integrity sha512-wE9tMHlAL5ZBluXpdVwxhBiPv7J9HwEBc5tVHFDP6TJkvhvf2RTDkCPDOPP5wCSLAFATImbzgwgoNM30/ghDTw==
   dependencies:
     binary-search-bounds "^2.0.4"
     bit-twiddle "^1.0.2"
@@ -6391,10 +6391,10 @@ planar-graph-to-polyline@^1.0.0:
     two-product "^1.0.0"
     uniq "^1.0.0"
 
-plotly.js@1.52.3:
-  version "1.52.3"
-  resolved "https://artifacts.apextoaster.com/repository/group-npm/plotly.js/-/plotly.js-1.52.3.tgz#2ae534811447d053765d9c2a8829878dc1f3c489"
-  integrity sha512-7szNqbVuhqn4ZgaTpJ9h4+9PzjoXJnSdzjnY5QwHddp/j0xu5kpHCGvkg+WmeF3brK3y8qwEHF/MIFBBa7i0ng==
+plotly.js@1.53.0:
+  version "1.53.0"
+  resolved "https://artifacts.apextoaster.com/repository/group-npm/plotly.js/-/plotly.js-1.53.0.tgz#6fe67d76051dc7c7be905b72eda5956817f0d740"
+  integrity sha512-pNZNdwJs9Qdm/gti9blVA9Io4OfDktatT4k7yBDT+oH/JDbDu9p4/M/15o83qla+ecZx2d5rwOEt9vuytBMhFA==
   dependencies:
     "@plotly/d3-sankey" "0.7.2"
     "@plotly/d3-sankey-circular" "0.33.1"
@@ -6428,7 +6428,7 @@ plotly.js@1.52.3:
     gl-select-box "^1.0.3"
     gl-spikes2d "^1.0.2"
     gl-streamtube3d "^1.4.0"
-    gl-surface3d "^1.4.6"
+    gl-surface3d "^1.5.1"
     gl-text "^1.1.8"
     glslify "^7.0.0"
     has-hover "^1.0.1"
