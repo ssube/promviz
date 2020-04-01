@@ -7,7 +7,7 @@
     "@types/d3": "5.7.2",
     "@types/lodash": "4.14.149",
     "@types/mocha": "7.0.2",
-    "@types/react": "16.9.30",
+    "@types/react": "16.9.31",
     "@types/react-dom": "16.9.5",
     "@types/react-plotly.js": "2.2.4",
     "@types/sinon-chai": "3.2.4",
