@@ -5528,17 +5528,17 @@ mkdirp@^0.5.3:
   dependencies:
     minimist "^1.2.5"
 
-mobx-react-lite@^1.4.2:
-  version "1.5.1"
-  resolved "https://artifacts.apextoaster.com/repository/group-npm/mobx-react-lite/-/mobx-react-lite-1.5.1.tgz#8eac90985b4d2bee475dd90a0d4d903be578f154"
-  integrity sha512-40Gn8hFq+MuNHqCaeSo2adN4WvpWkIeSYZVJWzRzm0rbEf0BFow6Ir9IefErql0pX9q650TN1JAQXvrXxKR8Mg==
+mobx-react-lite@2:
+  version "2.0.2"
+  resolved "https://artifacts.apextoaster.com/repository/group-npm/mobx-react-lite/-/mobx-react-lite-2.0.2.tgz#f6141a9f6496225858259b41f7a485b8c4a81c25"
+  integrity sha512-EH8TgjLQWpO+acVitShI+yRph0siVamNh50zRgEzbDF99U4LdhyMBQSfR9H95D48EUB8/QzTINmf8qrbQjyAOw==
 
-mobx-react@6.1.8:
-  version "6.1.8"
-  resolved "https://artifacts.apextoaster.com/repository/group-npm/mobx-react/-/mobx-react-6.1.8.tgz#5b9a3950463d58c154dda2c94d16d48ed8fcb02e"
-  integrity sha512-NCMJn/hrWoeyeNbzCsBDtftWSy6VlFgw1VzhogrciPFvJIl2xs+8rJJdPlRHQTiNirwNoHNKJgUE4WhPZPvKDw==
+mobx-react@6.2.0:
+  version "6.2.0"
+  resolved "https://artifacts.apextoaster.com/repository/group-npm/mobx-react/-/mobx-react-6.2.0.tgz#782b46bcfd505489a65882b74b78272155934501"
+  integrity sha512-Lb1Dqj4wxky1lkBjfPw5+FN8GOQym2N3xhuxa1y5qgU1kiS8xOj1qRxz2SoDgzDavMIN6ykBqOle6wdBs3KPcQ==
   dependencies:
-    mobx-react-lite "^1.4.2"
+    mobx-react-lite "2"
 
 mobx@5.15.4:
   version "5.15.4"
