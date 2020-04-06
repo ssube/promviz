@@ -2,6 +2,25 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.2.3](https://git.apextoaster.com/ssube/promviz/compare/v0.2.2...v0.2.3) (2020-04-06)
+
+
+### Features
+
+* **build:** send test results to sonar ([2b21734](https://git.apextoaster.com/ssube/promviz/commit/2b217347e9435b2c932d78b86a8b823eed3bdd82))
+* **container:** switch to nginx-based container ([90a4c1e](https://git.apextoaster.com/ssube/promviz/commit/90a4c1e3d0488ae92ae0945aef02e200fc22c60a))
+* **docs:** add readme badges ([b1e09b6](https://git.apextoaster.com/ssube/promviz/commit/b1e09b689291c6a00537d89526fa9f6d4b6cead8))
+
+
+### Bug Fixes
+
+* **build:** bump memory for coverage ([b4a0019](https://git.apextoaster.com/ssube/promviz/commit/b4a00191c4ee5883c183ac74ecbc48435f9fbaf7))
+* **build:** lint allow null in maybe type ([52ce182](https://git.apextoaster.com/ssube/promviz/commit/52ce182d2e8cd6b6d834eeb66d1bf51353346c46))
+* add nyc typescript config template ([6795672](https://git.apextoaster.com/ssube/promviz/commit/679567236791d28b2e5d66eefa58f0372773c730))
+* **build:** move sonar upload to make target ([ed40895](https://git.apextoaster.com/ssube/promviz/commit/ed40895d8bd19b3a2c757a6b709b325d199e53b3))
+* **build:** use main module as package ep ([800bdd5](https://git.apextoaster.com/ssube/promviz/commit/800bdd560c7982a97d387032f301452740a5747c))
+* **docs:** explain serve in gitpod ([b0343ee](https://git.apextoaster.com/ssube/promviz/commit/b0343eef618a170c02b3b468f7899ee8659ffd24))
+
 ### [0.2.2](https://git.apextoaster.com/ssube/promviz/compare/v0.2.1...v0.2.2) (2019-12-09)
 
 
