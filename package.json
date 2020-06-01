@@ -58,7 +58,7 @@
     "source-map-support": "0.5.18",
     "standard-version": "8.0.0",
     "tslint": "6.1.2",
-    "typescript": "3.8.3"
+    "typescript": "3.9.3"
   },
   "name": "promviz",
   "version": "0.2.3",
