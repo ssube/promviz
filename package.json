@@ -11,7 +11,7 @@
     "@types/react-dom": "16.9.8",
     "@types/react-plotly.js": "2.2.4",
     "@types/sinon-chai": "3.2.4",
-    "@types/source-map-support": "0.5.1",
+    "@types/source-map-support": "0.5.2",
     "@typescript-eslint/eslint-plugin": "2.34.0",
     "@typescript-eslint/eslint-plugin-tslint": "2.34.0",
     "@typescript-eslint/parser": "2.34.0",
@@ -55,7 +55,7 @@
     "rollup-plugin-typescript2": "0.27.1",
     "rollup-plugin-yaml": "2.0.0",
     "sinon-chai": "3.5.0",
-    "source-map-support": "0.5.18",
+    "source-map-support": "0.5.19",
     "standard-version": "8.0.2",
     "tslint": "6.1.2",
     "typescript": "3.9.7"
