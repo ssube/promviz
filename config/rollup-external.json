@@ -3,6 +3,7 @@
 		"async_hooks",
 		"mocha",
 		"sinon",
+		"source-map",
 		"source-map-support"
 	]
 }

@@ -18,10 +18,6 @@ const metadata = require('../package.json');
 const external = require('./rollup-external.json').names;
 const globals = require('./rollup-globals.json');
 const namedExports = require('./rollup-named.json');
-const stubNames = require('./rollup-stub.json').names;
-
-const passStub = 'require("pass-stub")';
-const stubs = stubNames.reduce((p, c) => (p[c] = passStub, p), {});
 
 const rootPath = process.env['ROOT_PATH'];
 const targetPath = process.env['TARGET_PATH'];
@@ -76,14 +72,6 @@ const bundle = {
 			deps: true,
 			devDeps: false,
 			peerDeps: false,
-		}),
-		replace({
-			delimiters: ['require("', '")'],
-			values: stubs,
-		}),
-		replace({
-			delimiters: ['require(\'', '\')'],
-			values: stubs,
 		}),
 		replace({
 			delimiters: ['{{ ', ' }}'],
