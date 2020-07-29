@@ -36,7 +36,7 @@
     "jsdom-global": "3.0.2",
     "lodash": "4.17.19",
     "mobx": "5.15.4",
-    "mobx-react": "6.2.3",
+    "mobx-react": "6.2.5",
     "mocha": "8.0.1",
     "nyc": "15.1.0",
     "plotly.js": "1.54.7",
