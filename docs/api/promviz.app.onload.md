@@ -14,9 +14,9 @@ onLoad(data: GraphData): void;
 
 |  Parameter | Type | Description |
 |  --- | --- | --- |
-|  data | <code>GraphData</code> |  |
+|  data | GraphData |  |
 
 <b>Returns:</b>
 
-`void`
+void
 

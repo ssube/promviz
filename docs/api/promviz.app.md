@@ -9,6 +9,7 @@
 ```typescript
 export declare class App extends React.Component<AppProps> 
 ```
+<b>Extends:</b> React.Component&lt;AppProps&gt;
 
 ## Methods
 
