@@ -14,9 +14,9 @@ export declare function main(args: ReadonlyArray<string>): Promise<number>;
 
 |  Parameter | Type | Description |
 |  --- | --- | --- |
-|  args | <code>ReadonlyArray&lt;string&gt;</code> |  |
+|  args | ReadonlyArray&lt;string&gt; |  |
 
 <b>Returns:</b>
 
-`Promise<number>`
+Promise&lt;number&gt;
 
