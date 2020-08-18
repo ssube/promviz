@@ -34,7 +34,7 @@
     "esm": "3.2.25",
     "jsdom": "16.4.0",
     "jsdom-global": "3.0.2",
-    "lodash": "4.17.19",
+    "lodash": "4.17.20",
     "mobx": "5.15.5",
     "mobx-react": "6.2.5",
     "mocha": "8.1.1",
