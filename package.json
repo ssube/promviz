@@ -43,7 +43,7 @@
     "react": "16.14.0",
     "react-dom": "16.14.0",
     "react-plotly.js": "2.5.0",
-    "rollup": "2.30.0",
+    "rollup": "2.31.0",
     "rollup-plugin-commonjs": "10.1.0",
     "rollup-plugin-eslint": "7.0.0",
     "rollup-plugin-json": "4.0.0",
