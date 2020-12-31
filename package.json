@@ -8,7 +8,7 @@
     "@types/lodash": "4.14.166",
     "@types/mocha": "8.2.0",
     "@types/react": "16.9.55",
-    "@types/react-dom": "16.9.10",
+    "@types/react-dom": "17.0.0",
     "@types/react-plotly.js": "2.2.4",
     "@types/sinon-chai": "3.2.5",
     "@types/source-map-support": "0.5.3",
