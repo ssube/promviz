@@ -257,10 +257,10 @@
   resolved "https://artifacts.apextoaster.com/repository/group-npm/@mapbox/whoots-js/-/whoots-js-3.1.0.tgz#497c67a1cef50d1a2459ba60f315e448d2ad87fe"
   integrity sha512-Es6WcD0nO5l+2BOQS4uLfNPYQaNDfbot3X1XUoloz+x0mPDS3eeORZJl06HXjwBG1fOGwCRnzK88LMdxKRrd6Q==
 
-"@microsoft/api-documenter@7.12.15":
-  version "7.12.15"
-  resolved "https://artifacts.apextoaster.com/repository/group-npm/@microsoft/api-documenter/-/api-documenter-7.12.15.tgz#d40d6b5f400f35499e465596abcda26210f84dbb"
-  integrity sha512-ppggqrWmA9dl9/j4CiZynXevce0OxeGspu+LxFEYuPBXyDhGddztUvy6qMOHIQfcqgBQG9kBMF3eWuYb77JrPg==
+"@microsoft/api-documenter@7.12.16":
+  version "7.12.16"
+  resolved "https://artifacts.apextoaster.com/repository/group-npm/@microsoft/api-documenter/-/api-documenter-7.12.16.tgz#55b8b62417761edb92ed84acecc8acb3ea24b3fe"
+  integrity sha512-KXc7sq0GzN0SkdYl1RV/Ij9psn0i+pgUl8dMQ43TyfxfPDMFEJRXkU1owNfCCaKCiusdIXIKj2n7G07ef07BvA==
   dependencies:
     "@microsoft/api-extractor-model" "7.12.2"
     "@microsoft/tsdoc" "0.12.24"
