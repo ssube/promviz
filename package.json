@@ -31,7 +31,7 @@
     "eslint-plugin-mocha": "8.1.0",
     "eslint-plugin-no-null": "1.0.2",
     "eslint-plugin-react": "7.23.2",
-    "eslint-plugin-sonarjs": "0.6.0",
+    "eslint-plugin-sonarjs": "0.7.0",
     "esm": "3.2.25",
     "jsdom": "16.5.3",
     "jsdom-global": "3.0.2",
