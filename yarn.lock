@@ -381,6 +381,11 @@
     d3-collection "1"
     d3-shape "^1.2.0"
 
+"@plotly/d3@3.8.0":
+  version "3.8.0"
+  resolved "https://artifacts.apextoaster.com/repository/group-npm/@plotly/d3/-/d3-3.8.0.tgz#760d41985ad76de4cbabe6c0a785bc713bea8433"
+  integrity sha512-L10iHgzvw3uSic/nQpYehlNzxUQvImwms5U7S95pJAEhrllzkrdQNy1Mc5DW9ab881Yr4fh300gJztKXWZDfkQ==
+
 "@plotly/point-cluster@^3.1.9":
   version "3.1.9"
   resolved "https://artifacts.apextoaster.com/repository/group-npm/@plotly/point-cluster/-/point-cluster-3.1.9.tgz#8ffec77fbf5041bf15401079e4fdf298220291c1"
@@ -478,21 +483,21 @@
   resolved "https://artifacts.apextoaster.com/repository/group-npm/@tootallnate/once/-/once-1.1.2.tgz#ccb91445360179a04e7fe6aff78c00ffc1eeaf82"
   integrity sha512-RbzJvlNzmRq5c3O09UipeuXno4tA1FE6ikOjxZK0tuxVv3412l64l5t1W5pj4+rJq9vpkm/kwiR07aZXnsKPxw==
 
-"@turf/area@^6.0.1":
-  version "6.0.1"
-  resolved "https://artifacts.apextoaster.com/repository/group-npm/@turf/area/-/area-6.0.1.tgz#50ed63c70ef2bdb72952384f1594319d94f3b051"
-  integrity sha512-Zv+3N1ep9P5JvR0YOYagLANyapGWQBh8atdeR3bKpWcigVXFsEKNUw03U/5xnh+cKzm7yozHD6MFJkqQv55y0g==
+"@turf/area@^6.4.0":
+  version "6.5.0"
+  resolved "https://artifacts.apextoaster.com/repository/group-npm/@turf/area/-/area-6.5.0.tgz#1d0d7aee01d8a4a3d4c91663ed35cc615f36ad56"
+  integrity sha512-xCZdiuojokLbQ+29qR6qoMD89hv+JAgWjLrwSEWL+3JV8IXKeNFl6XkEJz9HGkVpnXvQKJoRz4/liT+8ZZ5Jyg==
   dependencies:
-    "@turf/helpers" "6.x"
-    "@turf/meta" "6.x"
+    "@turf/helpers" "^6.5.0"
+    "@turf/meta" "^6.5.0"
 
-"@turf/bbox@^6.0.1":
-  version "6.0.1"
-  resolved "https://artifacts.apextoaster.com/repository/group-npm/@turf/bbox/-/bbox-6.0.1.tgz#b966075771475940ee1c16be2a12cf389e6e923a"
-  integrity sha512-EGgaRLettBG25Iyx7VyUINsPpVj1x3nFQFiGS3ER8KCI1MximzNLsam3eXRabqQDjyAKyAE1bJ4EZEpGvspQxw==
+"@turf/bbox@^6.4.0":
+  version "6.5.0"
+  resolved "https://artifacts.apextoaster.com/repository/group-npm/@turf/bbox/-/bbox-6.5.0.tgz#bec30a744019eae420dac9ea46fb75caa44d8dc5"
+  integrity sha512-RBbLaao5hXTYyyg577iuMtDB8ehxMlUqHEJiMs8jT1GHkFhr6sYre3lmLsPeYEi/ZKj5TP5tt7fkzNdJ4GIVyw==
   dependencies:
-    "@turf/helpers" "6.x"
-    "@turf/meta" "6.x"
+    "@turf/helpers" "^6.5.0"
+    "@turf/meta" "^6.5.0"
 
 "@turf/centroid@^6.0.2":
   version "6.0.2"
@@ -507,12 +512,24 @@
   resolved "https://artifacts.apextoaster.com/repository/group-npm/@turf/helpers/-/helpers-6.1.4.tgz#d6fd7ebe6782dd9c87dca5559bda5c48ae4c3836"
   integrity sha512-vJvrdOZy1ngC7r3MDA7zIGSoIgyrkWcGnNIEaqn/APmw+bVLF2gAW7HIsdTxd12s5wQMqEpqIQrmrbRRZ0xC7g==
 
+"@turf/helpers@^6.5.0":
+  version "6.5.0"
+  resolved "https://artifacts.apextoaster.com/repository/group-npm/@turf/helpers/-/helpers-6.5.0.tgz#f79af094bd6b8ce7ed2bd3e089a8493ee6cae82e"
+  integrity sha512-VbI1dV5bLFzohYYdgqwikdMVpe7pJ9X3E+dlr425wa2/sMJqYDhTO++ec38/pcPvPE6oD9WEEeU3Xu3gza+VPw==
+
 "@turf/meta@6.x":
   version "6.0.2"
   resolved "https://artifacts.apextoaster.com/repository/group-npm/@turf/meta/-/meta-6.0.2.tgz#eb92951126d24a613ac1b7b99d733fcc20fd30cf"
   integrity sha512-VA7HJkx7qF1l3+GNGkDVn2oXy4+QoLP6LktXAaZKjuT1JI0YESat7quUkbCMy4zP9lAUuvS4YMslLyTtr919FA==
   dependencies:
     "@turf/helpers" "6.x"
+
+"@turf/meta@^6.5.0":
+  version "6.5.0"
+  resolved "https://artifacts.apextoaster.com/repository/group-npm/@turf/meta/-/meta-6.5.0.tgz#b725c3653c9f432133eaa04d3421f7e51e0418ca"
+  integrity sha512-RrArvtsV0vdsCBegoBtOalgdSOfkBrTJ07VkpiCnq/491W67hnMWmDu7e6Ztw0C3WldRYTXkg3SumfdzZxLBHA==
+  dependencies:
+    "@turf/helpers" "^6.5.0"
 
 "@types/argparse@1.0.38":
   version "1.0.38"
@@ -1308,7 +1325,7 @@ array-bounds@^1.0.0, array-bounds@^1.0.1:
   resolved "https://artifacts.apextoaster.com/repository/group-npm/array-bounds/-/array-bounds-1.0.1.tgz#da11356b4e18e075a4f0c86e1f179a67b7d7ea31"
   integrity sha512-8wdW3ZGk6UjMPJx/glyEt0sLzzwAE1bhToPsO1W2pbpR2gULyxe3BjSiuJFheP50T/GgODVPz2fuMUmIywt8cQ==
 
-array-find-index@^1.0.1:
+array-find-index@^1.0.1, array-find-index@^1.0.2:
   version "1.0.2"
   resolved "https://artifacts.apextoaster.com/repository/group-npm/array-find-index/-/array-find-index-1.0.2.tgz#df010aa1287e164bbda6f9723b0a96a1ec4187a1"
   integrity sha1-3wEKoSh+Fku9pvlyOwqWoexBh6E=
@@ -1463,6 +1480,11 @@ binary-search-bounds@^1.0.0:
   version "1.0.0"
   resolved "https://artifacts.apextoaster.com/repository/group-npm/binary-search-bounds/-/binary-search-bounds-1.0.0.tgz#323ca317e3f2a40f4244c7255f5384a5b207bb69"
   integrity sha1-MjyjF+PypA9CRMclX1OEpbIHu2k=
+
+binary-search-bounds@^2.0.0:
+  version "2.0.5"
+  resolved "https://artifacts.apextoaster.com/repository/group-npm/binary-search-bounds/-/binary-search-bounds-2.0.5.tgz#125e5bd399882f71e6660d4bf1186384e989fba7"
+  integrity sha512-H0ea4Fd3lS1+sTEB2TgcLoK21lLhwEJzlQv3IN47pJS976Gx4zoWe0ak3q+uYh60ppQxg9F16Ri4tS1sfD4+jA==
 
 binary-search-bounds@^2.0.3, binary-search-bounds@^2.0.4:
   version "2.0.4"
@@ -1766,7 +1788,7 @@ clamp@^1.0.1:
   resolved "https://artifacts.apextoaster.com/repository/group-npm/clamp/-/clamp-1.0.1.tgz#66a0e64011816e37196828fdc8c8c147312c8634"
   integrity sha1-ZqDmQBGBbjcZaCj9yMjBRzEshjQ=
 
-clean-pslg@^1.1.0, clean-pslg@^1.1.2:
+clean-pslg@^1.1.0:
   version "1.1.2"
   resolved "https://artifacts.apextoaster.com/repository/group-npm/clean-pslg/-/clean-pslg-1.1.2.tgz#bd35c7460b7e8ab5a9f761a5ed51796aa3c86c11"
   integrity sha1-vTXHRgt+irWp92Gl7VF5aqPIbBE=
@@ -2474,12 +2496,34 @@ d3-force@^1.2.1:
   resolved "https://artifacts.apextoaster.com/repository/group-npm/d3-format/-/d3-format-3.0.1.tgz#e41b81b2ab79277141ec1404aa5d05001da64084"
   integrity sha512-hdL7+HBIohpgfolhBxr1KX47VMD6+vVD/oEFrxk5yhmzV2prk99EkFKYpXuhVkFpTgHdJ6/4bYcjdLPPXV4tIA==
 
+d3-format@^1.4.5:
+  version "1.4.5"
+  resolved "https://artifacts.apextoaster.com/repository/group-npm/d3-format/-/d3-format-1.4.5.tgz#374f2ba1320e3717eb74a9356c67daee17a7edb4"
+  integrity sha512-J0piedu6Z8iB6TbIGfZgDzfXxUFN3qQRMofy2oPdXzQibYGqPB/9iMcxr/TGalU+2RsyDO+U4f33id8tbnSRMQ==
+
+d3-geo-projection@^2.9.0:
+  version "2.9.0"
+  resolved "https://artifacts.apextoaster.com/repository/group-npm/d3-geo-projection/-/d3-geo-projection-2.9.0.tgz#826db62f748e8ecd67cd00aced4c26a236ec030c"
+  integrity sha512-ZULvK/zBn87of5rWAfFMc9mJOipeSo57O+BBitsKIXmU4rTVAnX1kSsJkE0R+TxY8pGNoM1nbyRRE7GYHhdOEQ==
+  dependencies:
+    commander "2"
+    d3-array "1"
+    d3-geo "^1.12.0"
+    resolve "^1.1.10"
+
 d3-geo@3:
   version "3.0.1"
   resolved "https://artifacts.apextoaster.com/repository/group-npm/d3-geo/-/d3-geo-3.0.1.tgz#4f92362fd8685d93e3b1fae0fd97dc8980b1ed7e"
   integrity sha512-Wt23xBych5tSy9IYAM1FR2rWIBFWa52B/oF/GYe5zbdHrg08FU8+BuI6X4PvTwPDdqdAdq04fuWJpELtsaEjeA==
   dependencies:
     d3-array "2.5.0 - 3"
+
+d3-geo@^1.12.0, d3-geo@^1.12.1:
+  version "1.12.1"
+  resolved "https://artifacts.apextoaster.com/repository/group-npm/d3-geo/-/d3-geo-1.12.1.tgz#7fc2ab7414b72e59fbcbd603e80d9adc029b035f"
+  integrity sha512-XG4d1c/UJSEX9NfU02KwBL6BYPj8YKHxgBEw5om2ZnTRSbIcego6dhHwcxuSR3clxh0EpE38os1DVPOmnYtTPg==
+  dependencies:
+    d3-array "1"
 
 d3-hierarchy@3:
   version "3.0.1"
@@ -2587,7 +2631,7 @@ d3-time-format@^2.2.3:
   dependencies:
     d3-time "1"
 
-d3-time@1:
+d3-time@1, d3-time@^1.1.0:
   version "1.1.0"
   resolved "https://artifacts.apextoaster.com/repository/group-npm/d3-time/-/d3-time-1.1.0.tgz#b1e19d307dae9c900b7e5b25ffc5dcc249a8a0f1"
   integrity sha512-Xh0isrZ5rPYYdqhAVk8VLnMEidhz5aP7htAADH6MfzgmmicPkTo8LhkLxci61/lCB7n7UmE3bN0leRt+qvkLxA==
@@ -2667,11 +2711,6 @@ d3@7.0.0:
     d3-transition "3"
     d3-zoom "3"
 
-d3@^3.5.17:
-  version "3.5.17"
-  resolved "https://artifacts.apextoaster.com/repository/group-npm/d3/-/d3-3.5.17.tgz#bc46748004378b21a360c9fc7cf5231790762fb8"
-  integrity sha1-vEZ0gAQ3iyGjYMn8fPUjF5B2L7g=
-
 d@1, d@^1.0.1:
   version "1.0.1"
   resolved "https://artifacts.apextoaster.com/repository/group-npm/d/-/d-1.0.1.tgz#8698095372d58dbee346ffd0c7093f99f8f9eb5a"
@@ -2699,19 +2738,19 @@ dateformat@^3.0.0:
   resolved "https://artifacts.apextoaster.com/repository/group-npm/dateformat/-/dateformat-3.0.3.tgz#a6e37499a4d9a9cf85ef5872044d62901c9889ae"
   integrity sha512-jyCETtSl3VMZMWeRo7iY1FL19ges1t55hMo5yaam4Jrsm5EPL89UQkoQRyiI+Yf4k8r2ZpdngkV8hr1lIdjb3Q==
 
+debug@2, debug@^2.6.9:
+  version "2.6.9"
+  resolved "https://artifacts.apextoaster.com/repository/group-npm/debug/-/debug-2.6.9.tgz#5d128515df134ff327e90a4c93f4e077a536341f"
+  integrity sha512-bC7ElrdJaJnPbAP+1EotYvqZsb3ecl5wi6Bfi6BJTUcNowp6cvspg0jXznRTKDjm/E7AdgFBVeAPVMNcKGsHMA==
+  dependencies:
+    ms "2.0.0"
+
 debug@4, debug@4.3.1, debug@^4.3.1:
   version "4.3.1"
   resolved "https://artifacts.apextoaster.com/repository/group-npm/debug/-/debug-4.3.1.tgz#f0d229c505e0c6d8c49ac553d1b13dc183f6b2ee"
   integrity sha512-doEwdvm4PCeK4K3RQN2ZC2BYUBaxwLARCqZmMjtF8a51J2Rb0xpVloFRnCODwqjpwnAoao4pelN8l3RJdv3gRQ==
   dependencies:
     ms "2.1.2"
-
-debug@^2.6.9:
-  version "2.6.9"
-  resolved "https://artifacts.apextoaster.com/repository/group-npm/debug/-/debug-2.6.9.tgz#5d128515df134ff327e90a4c93f4e077a536341f"
-  integrity sha512-bC7ElrdJaJnPbAP+1EotYvqZsb3ecl5wi6Bfi6BJTUcNowp6cvspg0jXznRTKDjm/E7AdgFBVeAPVMNcKGsHMA==
-  dependencies:
-    ms "2.0.0"
 
 debug@^3.1.0:
   version "3.2.6"
@@ -2720,7 +2759,7 @@ debug@^3.1.0:
   dependencies:
     ms "^2.1.1"
 
-debug@^3.2.7:
+debug@^3.2.6, debug@^3.2.7:
   version "3.2.7"
   resolved "https://artifacts.apextoaster.com/repository/group-npm/debug/-/debug-3.2.7.tgz#72580b7e9145fb39b6676f9c5e5fb100b934179a"
   integrity sha512-CFjzYYAi4ThfiQvizrFQevTTXHtnCqWfe7x1AhgEscTz6ZbLbfoLRLPugTQyBth6f8ZERVUSyWHFD/7Wu4t1XQ==
@@ -3139,11 +3178,6 @@ es6-iterator@^2.0.3, es6-iterator@~2.0.3:
     d "1"
     es5-ext "^0.10.35"
     es6-symbol "^3.1.1"
-
-es6-promise@^4.2.8:
-  version "4.2.8"
-  resolved "https://artifacts.apextoaster.com/repository/group-npm/es6-promise/-/es6-promise-4.2.8.tgz#4eb21594c972bc40553d276e510539143db53e0a"
-  integrity sha512-HJDGx5daxeIvxdBxvG2cb9g4tEvwIk3i8+nhX0yGrYmZUzbkdg8QbDevheDB8gd0//uPj4c1EQua8Q+MViT0/w==
 
 es6-symbol@^3.1.1, es6-symbol@~3.1.3:
   version "3.1.3"
@@ -4155,21 +4189,6 @@ gl-constants@^1.0.0:
   resolved "https://artifacts.apextoaster.com/repository/group-npm/gl-constants/-/gl-constants-1.0.0.tgz#597a504e364750ff50253aa35f8dea7af4a5d233"
   integrity sha1-WXpQTjZHUP9QJTqjX43qevSl0jM=
 
-gl-contour2d@^1.1.7:
-  version "1.1.7"
-  resolved "https://artifacts.apextoaster.com/repository/group-npm/gl-contour2d/-/gl-contour2d-1.1.7.tgz#ca330cf8449673a9ca0b3f6726c83f8d35c7a50c"
-  integrity sha512-GdebvJ9DtT3pJDpoE+eU2q+Wo9S3MijPpPz5arZbhK85w2bARmpFpVfPaDlZqWkB644W3BlH8TVyvAo1KE4Bhw==
-  dependencies:
-    binary-search-bounds "^2.0.4"
-    cdt2d "^1.0.0"
-    clean-pslg "^1.1.2"
-    gl-buffer "^2.1.2"
-    gl-shader "^4.2.1"
-    glslify "^7.0.0"
-    iota-array "^1.0.0"
-    ndarray "^1.0.18"
-    surface-nets "^1.0.2"
-
 gl-error3d@^1.0.16:
   version "1.0.16"
   resolved "https://artifacts.apextoaster.com/repository/group-npm/gl-error3d/-/gl-error3d-1.0.16.tgz#88a94952f5303d9cf5cb86806789a360777c5446"
@@ -4198,10 +4217,10 @@ gl-format-compiler-error@^1.0.2:
     glsl-shader-name "^1.0.0"
     sprintf-js "^1.0.3"
 
-gl-heatmap2d@^1.1.0:
-  version "1.1.0"
-  resolved "https://artifacts.apextoaster.com/repository/group-npm/gl-heatmap2d/-/gl-heatmap2d-1.1.0.tgz#01e52a62ae2154e775ab362850235789af44cefe"
-  integrity sha512-0FLXyxv6UBCzzhi4Q2u+9fUs6BX1+r5ZztFe27VikE9FUVw7hZiuSHmgDng92EpydogcSYHXCIK8+58RagODug==
+gl-heatmap2d@^1.1.1:
+  version "1.1.1"
+  resolved "https://artifacts.apextoaster.com/repository/group-npm/gl-heatmap2d/-/gl-heatmap2d-1.1.1.tgz#dbbb2c288bfe277002fa50985155b0403d87640f"
+  integrity sha512-6Vo1fPIB1vQFWBA/MR6JAA16XuQuhwvZRbSjYEq++m4QV33iqjGS2HcVIRfJGX+fomd5eiz6bwkVZcKm69zQPw==
   dependencies:
     binary-search-bounds "^2.0.4"
     gl-buffer "^2.1.2"
@@ -4908,7 +4927,7 @@ https-proxy-agent@^5.0.0:
     agent-base "6"
     debug "4"
 
-iconv-lite@0.4.24, iconv-lite@^0.4.17, iconv-lite@^0.4.24:
+iconv-lite@0.4.24, iconv-lite@^0.4.17, iconv-lite@^0.4.24, iconv-lite@^0.4.4:
   version "0.4.24"
   resolved "https://artifacts.apextoaster.com/repository/group-npm/iconv-lite/-/iconv-lite-0.4.24.tgz#2022b4b25fbddc21d2f524974a474aafe733908b"
   integrity sha512-v3MXnZAcvnywkTUEZomIActle7RXXeedOR31wwl7VlyoXO4Qi9arvSenNQWne1TcRwhCL1HwLI21bEqdpj8/rA==
@@ -4950,11 +4969,6 @@ image-palette@^2.1.0:
     color-id "^1.1.0"
     pxls "^2.0.0"
     quantize "^1.0.2"
-
-image-size@^0.7.5:
-  version "0.7.5"
-  resolved "https://artifacts.apextoaster.com/repository/group-npm/image-size/-/image-size-0.7.5.tgz#269f357cf5797cb44683dfa99790e54c705ead04"
-  integrity sha512-Hiyv+mXHfFEP7LzUL/llg9RwFxxY+o9N3JVLIeG5E7iFIFAalxvRU9UZthBdYDEVnzHMgjnKJPPpay5BWf1g9g==
 
 import-fresh@^3.0.0, import-fresh@^3.2.1:
   version "3.2.1"
@@ -5984,12 +5998,22 @@ math-log2@^1.0.1:
   resolved "https://artifacts.apextoaster.com/repository/group-npm/math-log2/-/math-log2-1.0.1.tgz#fb8941be5f5ebe8979e718e6273b178e58694565"
   integrity sha1-+4lBvl9evol55xjmJzsXjlhpRWU=
 
-matrix-camera-controller@^2.1.1, matrix-camera-controller@^2.1.3:
+matrix-camera-controller@^2.1.1:
   version "2.1.3"
   resolved "https://artifacts.apextoaster.com/repository/group-npm/matrix-camera-controller/-/matrix-camera-controller-2.1.3.tgz#35e5260cc1cd550962ba799f2d8d4e94b1a39370"
   integrity sha1-NeUmDMHNVQliunmfLY1OlLGjk3A=
   dependencies:
     binary-search-bounds "^1.0.0"
+    gl-mat4 "^1.1.2"
+    gl-vec3 "^1.0.3"
+    mat4-interpolate "^1.0.3"
+
+matrix-camera-controller@^2.1.4:
+  version "2.1.4"
+  resolved "https://artifacts.apextoaster.com/repository/group-npm/matrix-camera-controller/-/matrix-camera-controller-2.1.4.tgz#d316ae5e99fe801610c1d7842ab54566d4c62411"
+  integrity sha512-zsPGPONclrKSImNpqqKDTcqFpWLAIwMXEJtCde4IFPOw1dA9udzFg4HOFytOTosOFanchrx7+Hqq6glLATIxBA==
+  dependencies:
+    binary-search-bounds "^2.0.0"
     gl-mat4 "^1.1.2"
     gl-vec3 "^1.0.3"
     mat4-interpolate "^1.0.3"
@@ -6289,6 +6313,11 @@ nanoid@3.1.20:
   resolved "https://artifacts.apextoaster.com/repository/group-npm/nanoid/-/nanoid-3.1.20.tgz#badc263c6b1dcf14b71efaa85f6ab4c1d6cfc788"
   integrity sha512-a1cQNyczgKbLX9jwbS/+d7W8fX/RfgYR7lVWwWOGIPNgK2m0MWvrGF6/m4kk6U3QcFMnZf3RIhL0v2Jgh/0Uxw==
 
+native-promise-only@^0.8.1:
+  version "0.8.1"
+  resolved "https://artifacts.apextoaster.com/repository/group-npm/native-promise-only/-/native-promise-only-0.8.1.tgz#20a318c30cb45f71fe7adfbf7b21c99c1472ef11"
+  integrity sha1-IKMYwwy0X3H+et+/eyHJnBRy7xE=
+
 natural-compare@^1.4.0:
   version "1.4.0"
   resolved "https://artifacts.apextoaster.com/repository/group-npm/natural-compare/-/natural-compare-1.4.0.tgz#4abebfeed7541f2c27acfb29bdbbd15c8d5ba4f7"
@@ -6360,6 +6389,15 @@ ndarray@^1.0.19:
   dependencies:
     iota-array "^1.0.0"
     is-buffer "^1.0.2"
+
+needle@^2.5.2:
+  version "2.8.0"
+  resolved "https://artifacts.apextoaster.com/repository/group-npm/needle/-/needle-2.8.0.tgz#1c8ef9c1a2c29dcc1e83d73809d7bc681c80a048"
+  integrity sha512-ZTq6WYkN/3782H1393me3utVYdq2XyqNUFBsprEE3VMAT0+hP/cItpnITpqsY6ep2yeFE4Tqtqwc74VqUlUYtw==
+  dependencies:
+    debug "^3.2.6"
+    iconv-lite "^0.4.4"
+    sax "^1.2.4"
 
 neo-async@^2.6.0:
   version "2.6.2"
@@ -7032,16 +7070,17 @@ planar-graph-to-polyline@^1.0.0:
     two-product "^1.0.0"
     uniq "^1.0.0"
 
-plotly.js@1.58.5:
-  version "1.58.5"
-  resolved "https://artifacts.apextoaster.com/repository/group-npm/plotly.js/-/plotly.js-1.58.5.tgz#8f98ddce32c8333fe1e51d22b926324be059db95"
-  integrity sha512-ChTlnFXB4tB0CzcG1mqgUKYnrJsZ8REDGox8BHAa/ltsd48MOAhOmFgjyDxwsXyjjgwOI296GeYDft8g4ftLHQ==
+plotly.js@2.3.0:
+  version "2.3.0"
+  resolved "https://artifacts.apextoaster.com/repository/group-npm/plotly.js/-/plotly.js-2.3.0.tgz#234d8bcf49634d82f06ef82d4fc92a02317183c3"
+  integrity sha512-OUQhl83QNY2zViHSeyPz7w2zmuTfb+wuo7vpC8f2F1lTNWCcoGOBjnC7rtf7ezMN7OZNcUlm7eZBWYK4o+4eJA==
   dependencies:
+    "@plotly/d3" "3.8.0"
     "@plotly/d3-sankey" "0.7.2"
     "@plotly/d3-sankey-circular" "0.33.1"
     "@plotly/point-cluster" "^3.1.9"
-    "@turf/area" "^6.0.1"
-    "@turf/bbox" "^6.0.1"
+    "@turf/area" "^6.4.0"
+    "@turf/bbox" "^6.4.0"
     "@turf/centroid" "^6.0.2"
     alpha-shape "^1.0.0"
     canvas-fit "^1.5.0"
@@ -7051,18 +7090,19 @@ plotly.js@1.58.5:
     color-rgba "2.1.1"
     convex-hull "^1.0.3"
     country-regex "^1.1.0"
-    d3 "^3.5.17"
     d3-force "^1.2.1"
+    d3-format "^1.4.5"
+    d3-geo "^1.12.1"
+    d3-geo-projection "^2.9.0"
     d3-hierarchy "^1.1.9"
     d3-interpolate "^1.4.0"
+    d3-time "^1.1.0"
     d3-time-format "^2.2.3"
     delaunay-triangulate "^1.1.6"
-    es6-promise "^4.2.8"
     fast-isnumeric "^1.1.4"
     gl-cone3d "^1.5.2"
-    gl-contour2d "^1.1.7"
     gl-error3d "^1.0.16"
-    gl-heatmap2d "^1.1.0"
+    gl-heatmap2d "^1.1.1"
     gl-line3d "1.2.1"
     gl-mat4 "^1.2.0"
     gl-mesh3d "^2.3.1"
@@ -7078,25 +7118,25 @@ plotly.js@1.58.5:
     glslify "^7.1.1"
     has-hover "^1.0.1"
     has-passive-events "^1.0.0"
-    image-size "^0.7.5"
     is-mobile "^2.2.2"
     mapbox-gl "1.10.1"
-    matrix-camera-controller "^2.1.3"
+    matrix-camera-controller "^2.1.4"
     mouse-change "^1.4.0"
     mouse-event-offset "^3.0.2"
     mouse-wheel "^1.2.0"
+    native-promise-only "^0.8.1"
     ndarray "^1.0.19"
     ndarray-linear-interpolate "^1.0.0"
     parse-svg-path "^0.1.2"
     polybooljs "^1.2.0"
+    probe-image-size "^7.2.1"
     regl "^1.6.1"
-    regl-error2d "^2.0.11"
-    regl-line2d "^3.0.18"
-    regl-scatter2d "^3.2.1"
-    regl-splom "^1.0.12"
+    regl-error2d "^2.0.12"
+    regl-line2d "^3.1.1"
+    regl-scatter2d "^3.2.6"
+    regl-splom "^1.0.14"
     right-now "^1.0.0"
     robust-orientation "^1.1.3"
-    sane-topojson "^4.0.0"
     strongly-connected-components "^1.0.1"
     superscript-text "^1.0.0"
     svg-path-sdf "^1.1.3"
@@ -7147,6 +7187,15 @@ prelude-ls@~1.1.2:
   version "1.1.2"
   resolved "https://artifacts.apextoaster.com/repository/group-npm/prelude-ls/-/prelude-ls-1.1.2.tgz#21932a549f5e52ffd9a827f570e04be62a97da54"
   integrity sha1-IZMqVJ9eUv/ZqCf1cOBL5iqX2lQ=
+
+probe-image-size@^7.2.1:
+  version "7.2.1"
+  resolved "https://artifacts.apextoaster.com/repository/group-npm/probe-image-size/-/probe-image-size-7.2.1.tgz#df0c924e67e247bc94f8fcb0fad7f0081061fc44"
+  integrity sha512-d+6L3NvQBCNt4peRDoEfA7r9bPm6/qy18FnLKwg4NWBC5JrJm0pMLRg1kF4XNsPe1bUdt3WIMonPJzQWN2HXjQ==
+  dependencies:
+    lodash.merge "^4.6.2"
+    needle "^2.5.2"
+    stream-parser "~0.3.1"
 
 process-nextick-args@~2.0.0:
   version "2.0.1"
@@ -7449,25 +7498,26 @@ regexpp@^3.1.0:
   resolved "https://artifacts.apextoaster.com/repository/group-npm/regexpp/-/regexpp-3.1.0.tgz#206d0ad0a5648cffbdb8ae46438f3dc51c9f78e2"
   integrity sha512-ZOIzd8yVsQQA7j8GCSlPGXwg5PfmA1mrq0JP4nGhh54LaKN3xdai/vHUDu74pKwV8OxseMS65u2NImosQcSD0Q==
 
-regl-error2d@^2.0.11:
-  version "2.0.11"
-  resolved "https://artifacts.apextoaster.com/repository/group-npm/regl-error2d/-/regl-error2d-2.0.11.tgz#1de91b6fb02866ecf66e70bbba7419caae1c207b"
-  integrity sha512-Bv4DbLtDU69GXPSm+NvlVWzT82oQ8M2FK+SxzkyaYMlA9izZRdLmDADqBSyJTnPWiRT4a/2KA+MP+WI0N0yt7Q==
+regl-error2d@^2.0.12:
+  version "2.0.12"
+  resolved "https://artifacts.apextoaster.com/repository/group-npm/regl-error2d/-/regl-error2d-2.0.12.tgz#3b976e13fe641d5242a154fcacc80aecfa0a9881"
+  integrity sha512-r7BUprZoPO9AbyqM5qlJesrSRkl+hZnVKWKsVp7YhOl/3RIpi4UDGASGJY0puQ96u5fBYw/OlqV24IGcgJ0McA==
   dependencies:
     array-bounds "^1.0.1"
     color-normalize "^1.5.0"
     flatten-vertex-data "^1.0.2"
     object-assign "^4.1.1"
     pick-by-alias "^1.2.0"
-    to-float32 "^1.0.1"
+    to-float32 "^1.1.0"
     update-diff "^1.1.0"
 
-regl-line2d@^3.0.18:
-  version "3.0.18"
-  resolved "https://artifacts.apextoaster.com/repository/group-npm/regl-line2d/-/regl-line2d-3.0.18.tgz#84b68dcf4d7f878f97554183de02175627f0c246"
-  integrity sha512-yX1TlV0SHBdn8EkU+9K+K19qx7WSDOchrKx+h43rE2NCWuPlVj/MPDgrIXnzhnd42XhQtvvnkSc7aCSLjGAhZQ==
+regl-line2d@^3.1.1:
+  version "3.1.1"
+  resolved "https://artifacts.apextoaster.com/repository/group-npm/regl-line2d/-/regl-line2d-3.1.1.tgz#0eea97f88c889c91a9a0c9f35e1c4ae900d4b9ca"
+  integrity sha512-oxtdSNv2daqwOi72EpaT9WRtvA/DOAq9D/icNBs1fZviPSnC/6O85UgPpAuTguj+ri0n/e9+FDbqauYg+l+uqA==
   dependencies:
     array-bounds "^1.0.1"
+    array-find-index "^1.0.2"
     array-normalize "^1.1.4"
     color-normalize "^1.5.0"
     earcut "^2.1.5"
@@ -7477,34 +7527,12 @@ regl-line2d@^3.0.18:
     object-assign "^4.1.1"
     parse-rect "^1.2.0"
     pick-by-alias "^1.2.0"
-    to-float32 "^1.0.1"
+    to-float32 "^1.1.0"
 
-regl-scatter2d@^3.1.9:
-  version "3.2.0"
-  resolved "https://artifacts.apextoaster.com/repository/group-npm/regl-scatter2d/-/regl-scatter2d-3.2.0.tgz#c4733d94bc6352e74c5e5e660a498343d1b7e4cc"
-  integrity sha512-c0MxiakVW50UBslsHRmnq41w53bhat5oGvugZEpIZGTdKHVeopRAR2FQHeJf8YrEhOsVn7TpOk9tjySoyHXWGA==
-  dependencies:
-    "@plotly/point-cluster" "^3.1.9"
-    array-range "^1.0.1"
-    array-rearrange "^2.2.2"
-    clamp "^1.0.1"
-    color-id "^1.1.0"
-    color-normalize "1.5.0"
-    color-rgba "^2.1.1"
-    flatten-vertex-data "^1.0.2"
-    glslify "^7.0.0"
-    image-palette "^2.1.0"
-    is-iexplorer "^1.0.0"
-    object-assign "^4.1.1"
-    parse-rect "^1.2.0"
-    pick-by-alias "^1.2.0"
-    to-float32 "^1.0.1"
-    update-diff "^1.1.0"
-
-regl-scatter2d@^3.2.1:
-  version "3.2.1"
-  resolved "https://artifacts.apextoaster.com/repository/group-npm/regl-scatter2d/-/regl-scatter2d-3.2.1.tgz#2818ba506559e4cd29fb60eacc2d2999be32da8d"
-  integrity sha512-qxUCK5kXuoVZin2gPLXkgkBfRr3XLobVgEfn5N0fiprsb/ncTCtSNVBqP0EJgNb115R+FXte9LKA9YrFx7uBnA==
+regl-scatter2d@^3.2.3, regl-scatter2d@^3.2.6:
+  version "3.2.6"
+  resolved "https://artifacts.apextoaster.com/repository/group-npm/regl-scatter2d/-/regl-scatter2d-3.2.6.tgz#22c8e48e61d174994e97339bd203b022132349fb"
+  integrity sha512-ElPlu6jIx1Par4pG8OIhBuw5F5d+5qynYIlx4lMgikzkRtBgN5hjB3nfEp6jsMm4INPM367fs5vn6XcHD/s0Ow==
   dependencies:
     "@plotly/point-cluster" "^3.1.9"
     array-range "^1.0.1"
@@ -7520,13 +7548,13 @@ regl-scatter2d@^3.2.1:
     object-assign "^4.1.1"
     parse-rect "^1.2.0"
     pick-by-alias "^1.2.0"
-    to-float32 "^1.0.1"
+    to-float32 "^1.1.0"
     update-diff "^1.1.0"
 
-regl-splom@^1.0.12:
-  version "1.0.12"
-  resolved "https://artifacts.apextoaster.com/repository/group-npm/regl-splom/-/regl-splom-1.0.12.tgz#635e1a238e4d5eb7ba07854e30af79b49313be4e"
-  integrity sha512-LliMmAQ6wJFuPiLxZgYOFOzjhWcrIWPbS3Vf763Twl6R8eKpuUyRHZ54q+hxWGYwICHoPCBKMs7pVAJi8Iv7/w==
+regl-splom@^1.0.14:
+  version "1.0.14"
+  resolved "https://artifacts.apextoaster.com/repository/group-npm/regl-splom/-/regl-splom-1.0.14.tgz#58800b7bbd7576aa323499a1966868a6c9ea1456"
+  integrity sha512-OiLqjmPRYbd7kDlHC6/zDf6L8lxgDC65BhC8JirhP4ykrK4x22ZyS+BnY8EUinXKDeMgmpRwCvUmk7BK4Nweuw==
   dependencies:
     array-bounds "^1.0.1"
     array-range "^1.0.1"
@@ -7535,7 +7563,7 @@ regl-splom@^1.0.12:
     parse-rect "^1.2.0"
     pick-by-alias "^1.2.0"
     raf "^3.4.1"
-    regl-scatter2d "^3.1.9"
+    regl-scatter2d "^3.2.3"
 
 regl@^1.3.11:
   version "1.3.13"
@@ -7619,7 +7647,7 @@ resolve-protobuf-schema@^2.1.0:
   dependencies:
     protocol-buffers-schema "^3.3.1"
 
-resolve@1.20.0, resolve@^1.20.0:
+resolve@1.20.0, resolve@^1.1.10, resolve@^1.20.0:
   version "1.20.0"
   resolved "https://artifacts.apextoaster.com/repository/group-npm/resolve/-/resolve-1.20.0.tgz#629a013fb3f70755d6f0b7935cc1c2c5378b1975"
   integrity sha512-wENBPt4ySzg4ybFQW2TT1zMQucPK95HSh/nq2CFTZVOGut2+pQvSsgtda4d26YrYcr067wjbmzOG8byDPBX63A==
@@ -7969,10 +7997,10 @@ safe-buffer@~5.1.0, safe-buffer@~5.1.1:
   resolved "https://artifacts.apextoaster.com/repository/group-npm/safer-buffer/-/safer-buffer-2.1.2.tgz#44fa161b0187b9549dd84bb91802f9bd8385cd6a"
   integrity sha512-YZo3K82SD7Riyi0E1EQPojLz7kpepnSQI9IyPbHHg1XXXevb5dJI7tpyN2ADxGcQbHG7vcyRHk0cbwqcQriUtg==
 
-sane-topojson@^4.0.0:
-  version "4.0.0"
-  resolved "https://artifacts.apextoaster.com/repository/group-npm/sane-topojson/-/sane-topojson-4.0.0.tgz#624cdb26fc6d9392c806897bfd1a393f29bb5308"
-  integrity sha512-bJILrpBboQfabG3BNnHI2hZl52pbt80BE09u4WhnrmzuF2JbMKZdl62G5glXskJ46p+gxE2IzOwGj/awR4g8AA==
+sax@^1.2.4:
+  version "1.2.4"
+  resolved "https://artifacts.apextoaster.com/repository/group-npm/sax/-/sax-1.2.4.tgz#2816234e2378bddc4e5354fab5caa895df7100d9"
+  integrity sha512-NqVDv9TpANUjFm0N8uM5GxL36UgKi9/atZw+x7YFnQ8ckwFGKrl4xX4yWtrey3UJm5nP1kUbnYgLopqWNSRhWw==
 
 saxes@^5.0.1:
   version "5.0.1"
@@ -8336,6 +8364,13 @@ static-eval@^2.0.5:
   integrity sha512-agtxZ/kWSsCkI5E4QifRwsaPs0P0JmZV6dkLz6ILYfFYQGn+5plctanRN+IC8dJRiFkyXHrwEE3W9Wmx67uDbw==
   dependencies:
     escodegen "^1.11.1"
+
+stream-parser@~0.3.1:
+  version "0.3.1"
+  resolved "https://artifacts.apextoaster.com/repository/group-npm/stream-parser/-/stream-parser-0.3.1.tgz#1618548694420021a1182ff0af1911c129761773"
+  integrity sha1-FhhUhpRCACGhGC/wrxkRwSl2F3M=
+  dependencies:
+    debug "2"
 
 stream-shift@^1.0.0:
   version "1.0.0"
@@ -8825,10 +8860,10 @@ to-fast-properties@^2.0.0:
   resolved "https://artifacts.apextoaster.com/repository/group-npm/to-fast-properties/-/to-fast-properties-2.0.0.tgz#dc5e698cbd079265bc73e0377681a4e4e83f616e"
   integrity sha1-3F5pjL0HkmW8c+A3doGk5Og/YW4=
 
-to-float32@^1.0.1:
-  version "1.0.1"
-  resolved "https://artifacts.apextoaster.com/repository/group-npm/to-float32/-/to-float32-1.0.1.tgz#22d5921f38183164b9e7e9876158c0c16cb9753a"
-  integrity sha512-nOy2WSwae3xhZbc+05xiCuU3ZPPmH0L4Rg4Q1qiOGFSuNSCTB9nVJaGgGl3ZScxAclX/L8hJuDHJGDAzbfuKCQ==
+to-float32@^1.1.0:
+  version "1.1.0"
+  resolved "https://artifacts.apextoaster.com/repository/group-npm/to-float32/-/to-float32-1.1.0.tgz#39bd3b11eadccd490c08f5f9171da5127b6f3946"
+  integrity sha512-keDnAusn/vc+R3iEiSDw8TOF7gPiTLdK1ArvWtYbJQiVfmRg6i/CAvbKq3uIS0vWroAC7ZecN3DjQKw3aSklUg==
 
 to-px@1.0.1:
   version "1.0.1"
