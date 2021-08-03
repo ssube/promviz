@@ -4,22 +4,21 @@ Visualize Prometheus metrics as a sunburst graph, broken down by namespace and s
 
 ![example sunburst diagram of weighted metrics](https://raw.githubusercontent.com/ssube/promviz/master/docs/example-load.png)
 
-## Features
+## TODO
 
-- filter metrics by name, regexp
-- load JSON data from URL
-- show a nice graph
+This project required the [Prometheus SQL adapter schema](https://github.com/ssube/prometheus-sql-adapter), which
+has been retired, and needs to be updated to work with Prometheus' own `/api/v1/labels` endpoint.
 
 ## Contents
 
 - [promviz](#promviz)
-  - [Features](#features)
+  - [TODO](#todo)
   - [Contents](#contents)
-  - [Getting Started](#getting-started)
+  - [Usage](#usage)
   - [Status](#status)
   - [Releases](#releases)
 
-## Getting Started
+## Usage
 
 - clone this repo
   - into a gitpod: https://gitpod.io/#https://github.com/ssube/promviz/tree/master
@@ -37,20 +36,12 @@ Visualize Prometheus metrics as a sunburst graph, broken down by namespace and s
 
 ## Status
 
-[![Pipeline status](https://img.shields.io/gitlab/pipeline/ssube/promviz.svg?gitlab_url=https%3A%2F%2Fgit.apextoaster.com&logo=gitlab)](https://git.apextoaster.com/ssube/promviz/commits/master)
-[![Test coverage](https://codecov.io/gh/ssube/promviz/branch/master/graph/badge.svg)](https://codecov.io/gh/ssube/promviz)
 [![MIT license](https://img.shields.io/github/license/ssube/promviz.svg)](https://github.com/ssube/promviz/blob/master/LICENSE.md)
 
 [![Renovate badge](https://badges.renovateapi.com/github/ssube/promviz)](https://renovatebot.com)
 [![Dependency status](https://img.shields.io/david/ssube/promviz.svg)](https://david-dm.org/ssube/promviz)
 [![Dev dependency status](https://img.shields.io/david/dev/ssube/promviz.svg)](https://david-dm.org/ssube/promviz?type=dev)
 [![Known vulnerabilities](https://snyk.io/test/github/ssube/promviz/badge.svg)](https://snyk.io/test/github/ssube/promviz)
-
-[![Maintainability score](https://api.codeclimate.com/v1/badges/5d4326d6f68a2fa137cd/maintainability)](https://codeclimate.com/github/ssube/promviz/maintainability)
-[![Technical debt ratio](https://img.shields.io/codeclimate/tech-debt/ssube/promviz.svg)](https://codeclimate.com/github/ssube/promviz/trends/technical_debt)
-[![Quality issues](https://img.shields.io/codeclimate/issues/ssube/promviz.svg)](https://codeclimate.com/github/ssube/promviz/issues)
-[![Language grade: JavaScript](https://img.shields.io/lgtm/grade/javascript/g/ssube/promviz.svg?logo=lgtm)](https://lgtm.com/projects/g/ssube/promviz/context:javascript)
-[![Total alerts](https://img.shields.io/lgtm/alerts/g/ssube/promviz.svg)](https://lgtm.com/projects/g/ssube/promviz/alerts/)
 
 ## Releases
 
